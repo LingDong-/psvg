@@ -1,0 +1,16 @@
+<psvg width="300" height="260">
+
+  <def-sierptri x1="" y1="" x2="" y2="" x3="" y3="" d="7">
+    <path d="M{x1} {y1} L{x2} {y2} L{x3} {y3} z"/>
+    <if true="{d==0}">
+      <return/>
+    </if>
+    <sierptri x1="{x1}" y1="{y1}" x2="{(x1+x2)/2}" y2="{(y1+y2)/2}" x3="{(x3+x1)/2}" y3="{(y3+y1)/2}" d="{d-1}"/>
+    <sierptri x1="{x2}" y1="{y2}" x2="{(x2+x3)/2}" y2="{(y2+y3)/2}" x3="{(x1+x2)/2}" y3="{(y1+y2)/2}" d="{d-1}"/>
+    <sierptri x1="{x3}" y1="{y3}" x2="{(x3+x1)/2}" y2="{(y3+y1)/2}" x3="{(x2+x3)/2}" y3="{(y2+y3)/2}" d="{d-1}"/>
+  </def-sierptri>
+
+  <fill opacity="0.1"/>
+  <sierptri x1="{WIDTH/2}" y1="0" x2="{WIDTH}" y2="{HEIGHT}" x3="0" y3="{HEIGHT}"/>
+
+</psvg>

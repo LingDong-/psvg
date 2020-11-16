@@ -1,0 +1,76 @@
+<psvg width="300" height="300" background="black">
+
+  <def-dist2 x0="" y0="" x1="" y1="">
+    <var dx="{x0-x1}"/>
+    <var dy="{y0-y1}"/>
+    <return value="{dx*dx+dy*dy}"/>
+  </def-dist2>
+
+  <def-poissondisk r="4" k="30">
+    <var active=""/>
+    
+    <var w="{r/SQRT(2)}"/>
+    <var r2="{r*r}"/>
+    <var cols="{FLOOR(WIDTH/w)}"/>
+    <var rows="{FLOOR(HEIGHT/w)}"/>
+    
+    <var grid="{FILL(-1,cols*rows)}"/>
+    <var samples="{WIDTH/2} {HEIGHT/2}"/>
+
+    <for i="0" true="{i<COUNT(samples)}" step="2">
+      <asgn active="{CAT(active,NTH(samples,i),NTH(samples,i+1))}"/>
+      <var col="{FLOOR(NTH(samples,i)/w)}"/>
+      <var row="{FLOOR(NTH(samples,i+1)/w)}"/>
+      <asgn grid="{UPDATE(grid,row*cols+col,i/2)}"/>
+    </for>
+
+    <while true="{COUNT(active)}">
+      <var ridx="{FLOOR(RANDOM()*COUNT(active)/2)}"/>
+      <var pos="{TAKE(DROP(active,ridx*2),2)}"/>
+      <var found="0"/>
+      <for n="0" true="{n<k}" step="1">
+        <var sr="{RANDOM()*r+r}"/>
+        <var sa="{RANDOM()*PI*2}"/>
+        <var sx="{NTH(pos,0)+sr*COS(sa)}"/>
+        <var sy="{NTH(pos,1)+sr*SIN(sa)}"/>
+        <var col="{FLOOR(sx/w)}"/>
+        <var row="{FLOOR(sy/w)}"/>
+        <if true="{col>0 &amp;&amp; row>0 &amp;&amp;
+                   col<cols-1 &amp;&amp; row<rows-1}">
+          <var ok="1"/>
+          <for i="-1" true="{i<=1}" step="1">
+            <for j="-1" true="{j<=1}" step="1">
+              <var idx="{(row+i)*cols+col+j}"/>
+              <var nbr="{NTH(grid,idx)}"/>
+              <if true="nbr!=-1">
+                <var d="{dist2(sx,sy,NTH(samples,nbr*2),NTH(samples,nbr*2+1))}"/>
+                <if true="{d<r2}">
+                  <asgn ok="0"/>
+                </if>
+              </if>
+            </for>
+          </for>
+          <if true="{ok}">
+            <asgn found="1"/>
+            <asgn grid="{UPDATE(grid,row*cols+col,COUNT(samples)/2)}"/>
+            <var sample="{sx} {sy}"/>
+            <asgn active="{CAT(active,sample)}"/>
+            <asgn samples="{CAT(samples,sample)}"/>
+          </if>
+        </if>
+
+      </for>
+      <if false="{found}">
+        <asgn active="{CAT(TAKE(active,ridx*2),DROP(active,ridx*2+2))}"/>
+      </if>
+    </while>
+    
+    <for i="0" true="{i<COUNT(samples)}" step="2">
+      <fill color="hsl({i/5},80%,80%)"/>
+      <circle cx="{NTH(samples,i)}" cy="{NTH(samples,i+1)}" r="1.2"/>
+    </for>
+  </def-poissondisk>
+
+  <poissondisk/>
+
+</psvg>

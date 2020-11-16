@@ -1,0 +1,39 @@
+<psvg width="640" height="480">
+  <var depth="12"/>
+
+  <defs>
+    <for i="0" true="{i<depth}" step="1">
+      <var t="{i/(depth-1)}"/>
+      <var dark="rgb({FLOOR(LERP(110,0,t))},{FLOOR(LERP(50,120,t))},{FLOOR(LERP(0,200,t))})"/>
+      <linearGradient id="grad{i}">
+        <stop offset="0%"   stop-color="{dark}"/>
+        <stop offset="50%"  stop-color="rgb(200,{FLOOR(LERP(100,255,t))},0)"/>
+        <stop offset="100%" stop-color="{dark}"/>
+      </linearGradient>
+    </for>
+  </defs>
+
+  <def-pythtree w="" d="{depth}">
+    <push>
+      <fill color="url(#grad{depth-d})"/>
+      <path d="M0 {w/2} L{w/2} 0 L{w/2} {-w} L{-w/2} {-w} L{-w/2} 0 z"/>
+    </push>
+
+    <if true="{d==0}">
+      <return/>
+    </if>
+    <push>
+      <translate x="{-w/4}" y="{-w-w/4}"/>
+      <rotate deg="-45"/>
+      <pythtree w="{w/SQRT(2)}" d="{d-1}"/>
+    </push>
+    <push>
+      <translate x="{w/4}" y="{-w-w/4}"/>
+      <rotate deg="45"/>
+      <pythtree w="{w/SQRT(2)}" d="{d-1}"/>
+    </push>
+  </def-pythtree>
+
+  <translate x="{WIDTH/2}" y="{HEIGHT}"/>
+  <pythtree w="100"/>
+</psvg>

@@ -1,0 +1,30 @@
+<psvg width="640" height="360">
+
+  <def-branch h="0">
+    <asgn h="{h*0.66}"/>
+    <if true="{h>2}">
+      <push>
+        <rotate rad="{theta}"/>
+        <line x1="0" y1="0" x2="0" y2="{-h}"/>
+        <translate x="0" y="{-h}"/>
+        <branch h="{h}"/>
+      </push>
+      <push>
+        <rotate rad="{-theta}"/>
+        <line x1="0" y1="0" x2="0" y2="{-h}"/>
+        <translate x="0" y="{-h}"/>
+        <branch h="{h}"/>
+      </push>
+    </if>
+  </def-branch>
+
+  <var theta="{PI/6}"/>
+
+  <translate x="{WIDTH/2}" y="{HEIGHT}"/>
+
+  <stroke color="black" cap="round"/>
+  <line x1="0" y1="0" x2="0" y2="-120"/>
+  <translate x="0" y="-120"/>
+  <branch h="120"/>
+
+</psvg>
