@@ -1,3 +1,5 @@
+<!-- koch.psvg               -->
+<!-- draws a koch snowflake  -->
 <psvg width="400" height="400">
   <def-snowflake x1="" y1="" x2="" y2="" d="">
     <if true="{d==0}">

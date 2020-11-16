@@ -1,3 +1,7 @@
+<!-- poisson.psvg           -->
+<!-- poisson disk sampling  -->
+<!-- based on paper https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf -->
+<!-- and this impl. https://editor.p5js.org/codingtrain/sketches/4N78DFCXN                  -->
 <psvg width="300" height="300" background="black">
 
   <def-dist2 x0="" y0="" x1="" y1="">

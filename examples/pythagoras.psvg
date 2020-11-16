@@ -1,3 +1,6 @@
+<!-- pythagoras.psvg                 -->
+<!-- draws a pythagoras fractal tree -->
+<!-- inspired by https://en.wikipedia.org/wiki/Pythagoras_tree_(fractal)#/media/File:Pythagoras_Tree_Colored.png -->
 <psvg width="640" height="480">
   <var depth="12"/>
 

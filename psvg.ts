@@ -184,6 +184,7 @@ function transpilePSVG(prgm:PSVGElement[]):string{
     let groups = 0;
 
     function transpileValue(x:string):string{
+      x = x.trim();
       x = x.replace(/&gt;/g,">").replace(/&lt;/g,"<").replace(/&amp;/g,"&").replace(/&quot;/g,'"');
       if (x['startsWith']("{") && x['endsWith']("}") && (x.match(/{|}/g) || []).length==2){
         return x.slice(1,-1);

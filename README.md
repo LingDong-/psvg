@@ -1,5 +1,7 @@
 # PSVG - Programmable SVG
 
+**[Doc](QUICKSTART.md) | [Playground]() | [Examples](examples/)**
+
 PSVG is an extension of the SVG (Scalable Vector Graphics) format that introduces programming language features like functions, control flows, and variables -- Instead of writing a program that draws a picture, write a picture that draws itself!
 
 PSVG is compliant with XML and HTML specs, so it can be easily embeded in a webpage or edited with an XML editor.
@@ -146,3 +148,4 @@ Additionally, `parsePSVG()` `transpilePSVG()` and `evalPSVG()` which are individ
 
 In browser, `compilePSVG` and others are available globally. 
 
+**Check out [QUICKSTART.md](QUICKSTART.md) for a quick introduction to the PSVG language.**

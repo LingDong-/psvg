@@ -1,3 +1,5 @@
+<!-- sierpinski.psvg               -->
+<!-- draws a Sierpinski's triangle -->
 <psvg width="300" height="260">
 
   <def-sierptri x1="" y1="" x2="" y2="" x3="" y3="" d="7">

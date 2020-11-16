@@ -1,3 +1,7 @@
+<!-- hilbert.psvg            -->
+<!-- draws a hiblert curve   -->
+<!-- based on https://en.wikipedia.org/wiki/Hilbert_curve
+          and http://www.rosettacode.org/wiki/Hilbert_curve#Java -->
 <psvg width="256" height="256">
 
   <def-rot n="" x="" y="" rx="" ry="">
