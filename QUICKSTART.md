@@ -170,7 +170,7 @@ Math operators work just like you might expect. You have `+` `-` `*` `/` etc. Th
 <var x="{SIN(PI/2)+SQRT(3)}"/>
 ```
 
-Beware that some XML tools doesn't like `<` `>` and `&` even when they're inside strings, so you might need to write `x &amp;&amp; y` instead of `x && y`, or `x &lt; y` instead of `x < y`.
+Beware that some XML tools don't like `<` `>` and `&` even when they're inside strings, so you might need to write `x &amp;&amp; y` instead of `x && y`, or `x &lt; y` instead of `x < y`.
 
 ## Arrays
 

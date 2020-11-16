@@ -2,3 +2,4 @@ tests/
 .DS_Store
 **/.DS_Store
 node_modules/
+site/index.html
