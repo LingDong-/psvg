@@ -1,0 +1,44 @@
+<!-- text-anim.psvg      -->
+<!-- draws animated text -->
+
+<psvg width="600" height="230">
+  
+  <font family="sans-serif" 
+        weight="bold"
+        anchor="middle"
+  />
+  <stroke color="black"/>
+  
+  
+  <for i="-60" true="{i<WIDTH/2}" step="4">
+    <text x="{WIDTH-i}" y="{i/2+60-SIN(i*0.1)*10}"
+          fill="rgb(255,{i},{255-i})"
+          font-size="46">
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text>
+  </for>
+  
+  <for i="0" true="{i<WIDTH/2}" step="4">
+    <text x="{i-SIN(i*0.1)*10}" y="{i/2+30}"
+          fill="white"
+          font-size="100">
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text>
+  </for>
+  
+</psvg>

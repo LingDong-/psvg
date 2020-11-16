@@ -141,26 +141,47 @@ function transpilePSVG(prgm) {
     }
     var builtins = {
         NTH: (function (x, i) {
+            if (typeof x == 'string') {
+                x = __tolist(x);
+            }
             return x[i];
         }).toString(),
         TAKE: (function (x, n) {
+            if (typeof x == 'string') {
+                x = __tolist(x);
+            }
             return __makelist(x.slice(0, n));
         }).toString(),
         DROP: (function (x, n) {
+            if (typeof x == 'string') {
+                x = __tolist(x);
+            }
             return __makelist(x.slice(n));
         }).toString(),
         UPDATE: (function (x, i, y) {
+            if (typeof x == 'string') {
+                x = __tolist(x);
+            }
             var z = x.slice();
             z[i] = y;
             return __makelist(z);
         }).toString(),
         MAP: (function (x, f) {
+            if (typeof x == 'string') {
+                x = __tolist(x);
+            }
             return __makelist(x.map(function (y) { return f(__val(y)); }));
         }).toString(),
         FILTER: (function (x, f) {
+            if (typeof x == 'string') {
+                x = __tolist(x);
+            }
             return __makelist(x.filter(function (y) { return f(__val(y)); }));
         }).toString(),
         COUNT: (function (x) {
+            if (typeof x == 'string') {
+                x = __tolist(x);
+            }
             return x.length;
         }).toString(),
         CAT: (function () {
@@ -168,9 +189,12 @@ function transpilePSVG(prgm) {
             for (var _i = 0; _i < arguments.length; _i++) {
                 args[_i] = arguments[_i];
             }
-            return __makelist([].concat.apply([], args.filter(function (y) { return y.toString().length; })));
+            return __makelist([].concat.apply([], args.filter(function (y) { return y.toString().length; }).map(function (x) { return (typeof x == 'string') ? __tolist(x) : x; })));
         }).toString(),
         REV: (function (x) {
+            if (typeof x == 'string') {
+                x = __tolist(x);
+            }
             return __makelist(x.slice().reverse());
         }).toString(),
         FILL: (function (x, n) {
@@ -309,6 +333,24 @@ function transpilePSVG(prgm) {
                 out += ">`;";
                 groups++;
             }
+            else if (prgm[i].tagName.toUpperCase() == "FONT") {
+                out += "__out+=`<g ";
+                for (var k in prgm[i].attributes) {
+                    out += {
+                        family: "font-family",
+                        font: "font-family",
+                        style: "font-style",
+                        variant: "font-variant",
+                        stretch: "font-stretch",
+                        size: "font-size",
+                        anchor: "text-anchor",
+                        weight: "font-weight",
+                        decoration: "text-decoration"
+                    }[k] + "=\"${" + transpileValue(prgm[i].attributes[k]) + "}\" ";
+                }
+                out += ">`;";
+                groups++;
+            }
             else if (prgm[i].tagName.toUpperCase() == "SCALE") {
                 out += "__out+=`<g transform=\"scale(${" + transpileValue(prgm[i].attributes.x) + "} ${" + transpileValue(prgm[i].attributes.y) + "})\">`;";
                 groups++;
@@ -382,11 +424,9 @@ function transpilePSVG(prgm) {
                 var needInner = ["TEXT", "STYLE"]['includes'](prgm[i].tagName.toUpperCase());
                 if (prgm[i].children.length || needInner) {
                     out += ">`;";
+                    out += transpilePSVGList(prgm[i].children);
                     if (needInner) {
-                        out += "__out+=`" + prgm[i].innerHTML.replace(/`/g, "/`") + "`;";
-                    }
-                    else {
-                        out += transpilePSVGList(prgm[i].children);
+                        out += "__out+=`" + prgm[i].innerHTML.replace(/`/g, "/`").replace(/<.*?>/g, "") + "`;";
                     }
                     out += "__out+='</" + prgm[i].tagName + ">';";
                 }

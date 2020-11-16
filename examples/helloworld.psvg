@@ -1,0 +1,30 @@
+<!-- helloworld.psvg           -->
+<!-- draws text "Hello World!" -->
+
+<psvg width="512" height="512">
+  
+  <font family="sans-serif" 
+        weight="bold"
+        anchor="middle"
+  />
+  <stroke color="black"/>
+  
+  
+  <for i="-40" true="{i<=WIDTH/2}" step="4">
+    <text x="{WIDTH-i}" y="{i+40-SIN(i*0.1)*10}"
+          fill="rgb(255,{i},{255-i})"
+          font-size="46">
+      Hello World!
+    </text>
+  </for>
+  
+  <for i="0" true="{i<=WIDTH/2}" step="4">
+    <text x="{i-SIN(i*0.1)*10}" y="{i}"
+          fill="white"
+          font-size="100">
+      PSVG
+    </text>
+    
+  </for>
+
+</psvg>

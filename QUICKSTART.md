@@ -2,6 +2,20 @@
 
 PSVG is a very simple language that tries keep true to the "look and feel" of the SVG format from which it's derived. It's duck-typed; In fact, it does not have typing at all: As XML attributes, all values are just strings. As you apply operations to the values, they're interpreted to appropriate types: numbers, strings, or arrays. Terrible as that might sound (to proponents of strong type systems and fast languages, that is), it's so designed to play well with the rest of the SVG, while remaining expressive and concise.
 
+## A PSVG file
+
+The structure of a PSVG file is very much like that of an SVG file. Instead of wrapping everything with an `<svg>` tag, wrap everything with a `<psvg>` tag:
+
+```xml
+<psvg width="100" height="100" background="red">
+...
+<!--program/data goes here-->
+...
+</psvg>
+```
+
+As shown above, you can also assign a background color(or image/gradiant etc) for the file. `xmlns` can be ommitted. Any other attributes (e.g. `viewBox`) you specify will be also included in the `svg` tag of the compiled output.
+
 ## Variables
 
 Varaibles are declared with `var` tag.
@@ -191,6 +205,17 @@ This makes it super easy to put an array of points in say a `path` or `polyline`
 <var data="UPDATE(data,1,20)"/> <!-- changes first x coord-->
 <path d="{data}">
 ```
+
+## Misc
+
+In addition to math and array functions listed before, there're also a couple other builtins for convenience:
+
+- `WIDTH` and `HEIGHT` are dimensions of current image.
+- `MAPVAL(val,istart,istop,ostart,ostop)` maps a value to another range, like Processing/p5.js `map()`
+- `CLAMP(val,lo,hi)` clamps a value within specified range.
+- `RANDOM()` gives a random number between 0 and 1.
+- `LERP(a,b,t)` linearly interpolates between `a` and `b` by parameter `t`
+
 
 That's it! You now know all the basics of the PSVG language. Feel free to head over to `examples/` folder to learn by examples.
 

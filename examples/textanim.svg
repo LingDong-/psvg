@@ -1,0 +1,1606 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="230" ><g font-family="sans-serif" font-weight="bold" text-anchor="middle" ><g stroke="black" ><text x="660" y="27.20584501801074" fill="rgb(255,-60,315)" font-size="46" ><animate attributeName="x" values="670;650;670" begin="-0.6s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,-60,315);rgb(255,315,-60);rgb(255,-60,315)" begin="-0.6s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="656" y="25.687333621276792" fill="rgb(255,-56,311)" font-size="46" ><animate attributeName="x" values="666;646;666" begin="-0.56s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,-56,311);rgb(255,311,-56);rgb(255,-56,311)" begin="-0.56s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="652" y="25.16545344279847" fill="rgb(255,-52,307)" font-size="46" ><animate attributeName="x" values="662;642;662" begin="-0.52s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,-52,307);rgb(255,307,-52);rgb(255,-52,307)" begin="-0.52s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="648" y="26.038353911641593" fill="rgb(255,-48,303)" font-size="46" ><animate attributeName="x" values="658;638;658" begin="-0.48s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,-48,303);rgb(255,303,-48);rgb(255,-48,303)" begin="-0.48s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="644" y="28.48397926110484" fill="rgb(255,-44,299)" font-size="46" ><animate attributeName="x" values="654;634;654" begin="-0.44s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,-44,299);rgb(255,299,-44);rgb(255,-44,299)" begin="-0.44s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="640" y="32.43197504692072" fill="rgb(255,-40,295)" font-size="46" ><animate attributeName="x" values="650;630;650" begin="-0.4s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,-40,295);rgb(255,295,-40);rgb(255,-40,295)" begin="-0.4s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="636" y="37.574795567051474" fill="rgb(255,-36,291)" font-size="46" ><animate attributeName="x" values="646;626;646" begin="-0.36s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,-36,291);rgb(255,291,-36);rgb(255,-36,291)" begin="-0.36s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="632" y="43.4162585657242" fill="rgb(255,-32,287)" font-size="46" ><animate attributeName="x" values="642;622;642" begin="-0.32s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,-32,287);rgb(255,287,-32);rgb(255,-32,287)" begin="-0.32s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="628" y="49.34988150155905" fill="rgb(255,-28,283)" font-size="46" ><animate attributeName="x" values="638;618;638" begin="-0.28s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,-28,283);rgb(255,283,-28);rgb(255,-28,283)" begin="-0.28s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="624" y="54.75463180551151" fill="rgb(255,-24,279)" font-size="46" ><animate attributeName="x" values="634;614;634" begin="-0.24s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,-24,279);rgb(255,279,-24);rgb(255,-24,279)" begin="-0.24s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="620" y="59.09297426825682" fill="rgb(255,-20,275)" font-size="46" ><animate attributeName="x" values="630;610;630" begin="-0.2s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,-20,275);rgb(255,275,-20);rgb(255,-20,275)" begin="-0.2s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="616" y="61.99573603041505" fill="rgb(255,-16,271)" font-size="46" ><animate attributeName="x" values="626;606;626" begin="-0.16s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,-16,271);rgb(255,271,-16);rgb(255,-16,271)" begin="-0.16s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="612" y="63.320390859672266" fill="rgb(255,-12,267)" font-size="46" ><animate attributeName="x" values="622;602;622" begin="-0.12s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,-12,267);rgb(255,267,-12);rgb(255,-12,267)" begin="-0.12s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="608" y="63.17356090899523" fill="rgb(255,-8,263)" font-size="46" ><animate attributeName="x" values="618;598;618" begin="-0.08s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,-8,263);rgb(255,263,-8);rgb(255,-8,263)" begin="-0.08s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="604" y="61.8941834230865" fill="rgb(255,-4,259)" font-size="46" ><animate attributeName="x" values="614;594;614" begin="-0.04s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,-4,259);rgb(255,259,-4);rgb(255,-4,259)" begin="-0.04s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="600" y="60" fill="rgb(255,0,255)" font-size="46" ><animate attributeName="x" values="610;590;610" begin="0s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,0,255);rgb(255,255,0);rgb(255,0,255)" begin="0s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="596" y="58.1058165769135" fill="rgb(255,4,251)" font-size="46" ><animate attributeName="x" values="606;586;606" begin="0.04s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,4,251);rgb(255,251,4);rgb(255,4,251)" begin="0.04s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="592" y="56.82643909100477" fill="rgb(255,8,247)" font-size="46" ><animate attributeName="x" values="602;582;602" begin="0.08s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,8,247);rgb(255,247,8);rgb(255,8,247)" begin="0.08s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="588" y="56.679609140327734" fill="rgb(255,12,243)" font-size="46" ><animate attributeName="x" values="598;578;598" begin="0.12s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,12,243);rgb(255,243,12);rgb(255,12,243)" begin="0.12s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="584" y="58.00426396958495" fill="rgb(255,16,239)" font-size="46" ><animate attributeName="x" values="594;574;594" begin="0.16s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,16,239);rgb(255,239,16);rgb(255,16,239)" begin="0.16s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="580" y="60.90702573174318" fill="rgb(255,20,235)" font-size="46" ><animate attributeName="x" values="590;570;590" begin="0.2s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,20,235);rgb(255,235,20);rgb(255,20,235)" begin="0.2s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="576" y="65.24536819448849" fill="rgb(255,24,231)" font-size="46" ><animate attributeName="x" values="586;566;586" begin="0.24s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,24,231);rgb(255,231,24);rgb(255,24,231)" begin="0.24s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="572" y="70.65011849844095" fill="rgb(255,28,227)" font-size="46" ><animate attributeName="x" values="582;562;582" begin="0.28s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,28,227);rgb(255,227,28);rgb(255,28,227)" begin="0.28s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="568" y="76.5837414342758" fill="rgb(255,32,223)" font-size="46" ><animate attributeName="x" values="578;558;578" begin="0.32s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,32,223);rgb(255,223,32);rgb(255,32,223)" begin="0.32s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="564" y="82.42520443294852" fill="rgb(255,36,219)" font-size="46" ><animate attributeName="x" values="574;554;574" begin="0.36s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,36,219);rgb(255,219,36);rgb(255,36,219)" begin="0.36s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="560" y="87.56802495307929" fill="rgb(255,40,215)" font-size="46" ><animate attributeName="x" values="570;550;570" begin="0.4s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,40,215);rgb(255,215,40);rgb(255,40,215)" begin="0.4s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="556" y="91.51602073889516" fill="rgb(255,44,211)" font-size="46" ><animate attributeName="x" values="566;546;566" begin="0.44s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,44,211);rgb(255,211,44);rgb(255,44,211)" begin="0.44s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="552" y="93.9616460883584" fill="rgb(255,48,207)" font-size="46" ><animate attributeName="x" values="562;542;562" begin="0.48s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,48,207);rgb(255,207,48);rgb(255,48,207)" begin="0.48s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="548" y="94.83454655720153" fill="rgb(255,52,203)" font-size="46" ><animate attributeName="x" values="558;538;558" begin="0.52s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,52,203);rgb(255,203,52);rgb(255,52,203)" begin="0.52s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="544" y="94.31266637872321" fill="rgb(255,56,199)" font-size="46" ><animate attributeName="x" values="554;534;554" begin="0.56s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,56,199);rgb(255,199,56);rgb(255,56,199)" begin="0.56s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="540" y="92.79415498198927" fill="rgb(255,60,195)" font-size="46" ><animate attributeName="x" values="550;530;550" begin="0.6s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,60,195);rgb(255,195,60);rgb(255,60,195)" begin="0.6s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="536" y="90.83450795149507" fill="rgb(255,64,191)" font-size="46" ><animate attributeName="x" values="546;526;546" begin="0.64s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,64,191);rgb(255,191,64);rgb(255,64,191)" begin="0.64s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="532" y="89.05886648861392" fill="rgb(255,68,187)" font-size="46" ><animate attributeName="x" values="542;522;542" begin="0.68s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,68,187);rgb(255,187,68);rgb(255,68,187)" begin="0.68s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="528" y="88.06332136150847" fill="rgb(255,72,183)" font-size="46" ><animate attributeName="x" values="538;518;538" begin="0.72s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,72,183);rgb(255,183,72);rgb(255,72,183)" begin="0.72s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="524" y="88.32080327968514" fill="rgb(255,76,179)" font-size="46" ><animate attributeName="x" values="534;514;534" begin="0.76s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,76,179);rgb(255,179,76);rgb(255,76,179)" begin="0.76s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="520" y="90.10641753376618" fill="rgb(255,80,175)" font-size="46" ><animate attributeName="x" values="530;510;530" begin="0.8s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,80,175);rgb(255,175,80);rgb(255,80,175)" begin="0.8s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="516" y="93.4540109191172" fill="rgb(255,84,171)" font-size="46" ><animate attributeName="x" values="526;506;526" begin="0.84s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,84,171);rgb(255,171,84);rgb(255,84,171)" begin="0.84s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="512" y="98.15082807108239" fill="rgb(255,88,167)" font-size="46" ><animate attributeName="x" values="522;502;522" begin="0.88s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,88,167);rgb(255,167,88);rgb(255,88,167)" begin="0.88s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="508" y="103.77110085899754" fill="rgb(255,92,163)" font-size="46" ><animate attributeName="x" values="518;498;518" begin="0.92s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,92,163);rgb(255,163,92);rgb(255,92,163)" begin="0.92s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="504" y="109.74326781222982" fill="rgb(255,96,159)" font-size="46" ><animate attributeName="x" values="514;494;514" begin="0.96s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,96,159);rgb(255,159,96);rgb(255,96,159)" begin="0.96s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="500" y="115.44021110889369" fill="rgb(255,100,155)" font-size="46" ><animate attributeName="x" values="510;490;510" begin="1s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,100,155);rgb(255,155,100);rgb(255,100,155)" begin="1s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="496" y="120.27826469085653" fill="rgb(255,104,151)" font-size="46" ><animate attributeName="x" values="506;486;506" begin="1.04s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,104,151);rgb(255,151,104);rgb(255,104,151)" begin="1.04s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="492" y="123.80936230066492" fill="rgb(255,108,147)" font-size="46" ><animate attributeName="x" values="502;482;502" begin="1.08s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,108,147);rgb(255,147,108);rgb(255,108,147)" begin="1.08s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="488" y="125.79177729151317" fill="rgb(255,112,143)" font-size="46" ><animate attributeName="x" values="498;478;498" begin="1.12s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,112,143);rgb(255,143,112);rgb(255,112,143)" begin="1.12s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="484" y="126.22828594968708" fill="rgb(255,116,139)" font-size="46" ><animate attributeName="x" values="494;474;494" begin="1.16s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,116,139);rgb(255,139,116);rgb(255,116,139)" begin="1.16s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="480" y="125.36572918000435" fill="rgb(255,120,135)" font-size="46" ><animate attributeName="x" values="490;470;490" begin="1.2s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,120,135);rgb(255,135,120);rgb(255,120,135)" begin="1.2s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="476" y="123.6560417544831" fill="rgb(255,124,131)" font-size="46" ><animate attributeName="x" values="486;466;486" begin="1.24s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,124,131);rgb(255,131,124);rgb(255,124,131)" begin="1.24s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="472" y="121.68490174898461" fill="rgb(255,128,127)" font-size="46" ><animate attributeName="x" values="482;462;482" begin="1.28s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,128,127);rgb(255,127,128);rgb(255,128,127)" begin="1.28s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="468" y="120.07926485292775" fill="rgb(255,132,123)" font-size="46" ><animate attributeName="x" values="478;458;478" begin="1.32s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,132,123);rgb(255,123,132);rgb(255,132,123)" begin="1.32s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="464" y="119.40838185143502" fill="rgb(255,136,119)" font-size="46" ><animate attributeName="x" values="474;454;474" begin="1.36s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,136,119);rgb(255,119,136);rgb(255,136,119)" begin="1.36s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="460" y="120.0939264430513" fill="rgb(255,140,115)" font-size="46" ><animate attributeName="x" values="470;450;470" begin="1.4s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,140,115);rgb(255,115,140);rgb(255,140,115)" begin="1.4s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="456" y="122.34342223450723" fill="rgb(255,144,111)" font-size="46" ><animate attributeName="x" values="466;446;466" begin="1.44s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,144,111);rgb(255,111,144);rgb(255,144,111)" begin="1.44s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="452" y="126.11747932624684" fill="rgb(255,148,107)" font-size="46" ><animate attributeName="x" values="462;442;462" begin="1.48s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,148,107);rgb(255,107,148);rgb(255,148,107)" begin="1.48s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="448" y="131.136013111462" fill="rgb(255,152,103)" font-size="46" ><animate attributeName="x" values="458;438;458" begin="1.52s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,152,103);rgb(255,103,152);rgb(255,152,103)" begin="1.52s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="444" y="136.92246347700558" fill="rgb(255,156,99)" font-size="46" ><animate attributeName="x" values="454;434;454" begin="1.56s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,156,99);rgb(255,99,156);rgb(255,156,99)" begin="1.56s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="440" y="142.87903316665066" fill="rgb(255,160,95)" font-size="46" ><animate attributeName="x" values="450;430;450" begin="1.6s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,160,95);rgb(255,95,160);rgb(255,160,95)" begin="1.6s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="436" y="148.3810668234795" fill="rgb(255,164,91)" font-size="46" ><animate attributeName="x" values="446;426;446" begin="1.64s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,164,91);rgb(255,91,164);rgb(255,164,91)" begin="1.64s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="432" y="152.87567033581504" fill="rgb(255,168,87)" font-size="46" ><animate attributeName="x" values="442;422;442" begin="1.68s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,168,87);rgb(255,87,168);rgb(255,168,87)" begin="1.68s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="428" y="155.96900066041596" fill="rgb(255,172,83)" font-size="46" ><animate attributeName="x" values="438;418;438" begin="1.72s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,172,83);rgb(255,83,172);rgb(255,172,83)" begin="1.72s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="424" y="157.48844497918125" fill="rgb(255,176,79)" font-size="46" ><animate attributeName="x" values="434;414;434" begin="1.76s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,176,79);rgb(255,79,176);rgb(255,176,79)" begin="1.76s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="420" y="157.50987246771678" fill="rgb(255,180,75)" font-size="46" ><animate attributeName="x" values="430;410;430" begin="1.8s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,180,75);rgb(255,75,180);rgb(255,180,75)" begin="1.8s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="416" y="156.34565622071892" fill="rgb(255,184,71)" font-size="46" ><animate attributeName="x" values="426;406;426" begin="1.84s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,184,71);rgb(255,71,184);rgb(255,184,71)" begin="1.84s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="412" y="154.49535640878366" fill="rgb(255,188,67)" font-size="46" ><animate attributeName="x" values="422;402;422" begin="1.88s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,188,67);rgb(255,67,188);rgb(255,188,67)" begin="1.88s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="408" y="152.566850711801" fill="rgb(255,192,63)" font-size="46" ><animate attributeName="x" values="418;398;418" begin="1.92s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,192,63);rgb(255,63,192);rgb(255,192,63)" begin="1.92s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="404" y="151.18036379931866" fill="rgb(255,196,59)" font-size="46" ><animate attributeName="x" values="414;394;414" begin="1.96s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,196,59);rgb(255,59,196);rgb(255,196,59)" begin="1.96s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="400" y="150.87054749272372" fill="rgb(255,200,55)" font-size="46" ><animate attributeName="x" values="410;390;410" begin="2s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,200,55);rgb(255,55,200);rgb(255,200,55)" begin="2s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="396" y="152.00207099857332" fill="rgb(255,204,51)" font-size="46" ><animate attributeName="x" values="406;386;406" begin="2.04s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,204,51);rgb(255,51,204);rgb(255,204,51)" begin="2.04s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="392" y="154.7120476592276" fill="rgb(255,208,47)" font-size="46" ><animate attributeName="x" values="402;382;402" begin="2.08s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,208,47);rgb(255,47,208);rgb(255,208,47)" begin="2.08s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="388" y="158.8883877709402" fill="rgb(255,212,43)" font-size="46" ><animate attributeName="x" values="398;378;398" begin="2.12s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,212,43);rgb(255,43,212);rgb(255,212,43)" begin="2.12s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="384" y="164.18749508345059" fill="rgb(255,216,39)" font-size="46" ><animate attributeName="x" values="394;374;394" begin="2.16s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,216,39);rgb(255,39,216);rgb(255,216,39)" begin="2.16s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="380" y="170.08851309290404" fill="rgb(255,220,35)" font-size="46" ><animate attributeName="x" values="390;370;390" begin="2.2s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,220,35);rgb(255,35,220);rgb(255,220,35)" begin="2.2s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="376" y="175.97555683121436" fill="rgb(255,224,31)" font-size="46" ><animate attributeName="x" values="386;366;386" begin="2.24s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,224,31);rgb(255,31,224);rgb(255,224,31)" begin="2.24s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="372" y="181.23494756044244" fill="rgb(255,228,27)" font-size="46" ><animate attributeName="x" values="382;362;382" begin="2.28s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,228,27);rgb(255,27,228);rgb(255,228,27)" begin="2.28s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="368" y="185.3520991519454" fill="rgb(255,232,23)" font-size="46" ><animate attributeName="x" values="378;358;378" begin="2.32s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,232,23);rgb(255,23,232);rgb(255,232,23)" begin="2.32s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="364" y="187.9927599213663" fill="rgb(255,236,19)" font-size="46" ><animate attributeName="x" values="374;354;374" begin="2.36s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,236,19);rgb(255,19,236);rgb(255,236,19)" begin="2.36s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="360" y="189.05578362006625" fill="rgb(255,240,15)" font-size="46" ><animate attributeName="x" values="370;350;370" begin="2.4s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,240,15);rgb(255,15,240);rgb(255,240,15)" begin="2.4s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="356" y="188.68909820378022" fill="rgb(255,244,11)" font-size="46" ><animate attributeName="x" values="366;346;366" begin="2.44s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,244,11);rgb(255,11,244);rgb(255,244,11)" begin="2.44s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="352" y="187.26635126104722" fill="rgb(255,248,7)" font-size="46" ><animate attributeName="x" values="362;342;362" begin="2.48s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,248,7);rgb(255,7,248);rgb(255,248,7)" begin="2.48s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="348" y="185.32791927474523" fill="rgb(255,252,3)" font-size="46" ><animate attributeName="x" values="358;338;358" begin="2.52s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,252,3);rgb(255,3,252);rgb(255,252,3)" begin="2.52s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="344" y="183.4955940572461" fill="rgb(255,256,-1)" font-size="46" ><animate attributeName="x" values="354;334;354" begin="2.56s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,256,-1);rgb(255,-1,256);rgb(255,256,-1)" begin="2.56s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="340" y="182.37441549520398" fill="rgb(255,260,-5)" font-size="46" ><animate attributeName="x" values="350;330;350" begin="2.6s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,260,-5);rgb(255,-5,260);rgb(255,260,-5)" begin="2.6s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="336" y="182.45714905507302" fill="rgb(255,264,-9)" font-size="46" ><animate attributeName="x" values="346;326;346" begin="2.64s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,264,-9);rgb(255,-9,264);rgb(255,264,-9)" begin="2.64s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="332" y="184.0464889508844" fill="rgb(255,268,-13)" font-size="46" ><animate attributeName="x" values="342;322;342" begin="2.68s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,268,-13);rgb(255,-13,268);rgb(255,268,-13)" begin="2.68s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="328" y="187.2072693834928" fill="rgb(255,272,-17)" font-size="46" ><animate attributeName="x" values="338;318;338" begin="2.72s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,272,-17);rgb(255,-17,272);rgb(255,272,-17)" begin="2.72s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="324" y="191.75622864583607" fill="rgb(255,276,-21)" font-size="46" ><animate attributeName="x" values="334;314;334" begin="2.76s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,276,-21);rgb(255,-21,276);rgb(255,276,-21)" begin="2.76s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="320" y="197.29094211692131" fill="rgb(255,280,-25)" font-size="46" ><animate attributeName="x" values="330;310;330" begin="2.8s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,280,-25);rgb(255,-25,280);rgb(255,280,-25)" begin="2.8s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="316" y="203.25335626096432" fill="rgb(255,284,-29)" font-size="46" ><animate attributeName="x" values="326;306;326" begin="2.84s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,284,-29);rgb(255,-29,284);rgb(255,284,-29)" begin="2.84s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="312" y="209.01789301020574" fill="rgb(255,288,-33)" font-size="46" ><animate attributeName="x" values="322;302;322" begin="2.88s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,288,-33);rgb(255,-33,288);rgb(255,288,-33)" begin="2.88s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="308" y="213.99021478659617" fill="rgb(255,292,-37)" font-size="46" ><animate attributeName="x" values="318;298;318" begin="2.92s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,292,-37);rgb(255,-37,292);rgb(255,292,-37)" begin="2.92s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="304" y="217.70105733707186" fill="rgb(255,296,-41)" font-size="46" ><animate attributeName="x" values="314;294;314" begin="2.96s" dur="1s" repeatCount="indefinite" /><animate attributeName="fill" values="rgb(255,296,-41);rgb(255,-41,296);rgb(255,296,-41)" begin="2.96s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+               values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" 
+               values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      Draws itself!
+    </text><text x="0" y="30" fill="white" font-size="100" ><animate attributeName="y" values="30;-20;30" begin="0s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="0.10581657691349466" y="32" fill="white" font-size="100" ><animate attributeName="y" values="32;-18;32" begin="0.04s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="0.8264390910047723" y="34" fill="white" font-size="100" ><animate attributeName="y" values="34;-16;34" begin="0.08s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="2.6796091403277362" y="36" fill="white" font-size="100" ><animate attributeName="y" values="36;-14;36" begin="0.12s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="6.004263969584949" y="38" fill="white" font-size="100" ><animate attributeName="y" values="38;-12;38" begin="0.16s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="10.907025731743182" y="40" fill="white" font-size="100" ><animate attributeName="y" values="40;-10;40" begin="0.2s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="17.245368194488492" y="42" fill="white" font-size="100" ><animate attributeName="y" values="42;-8;42" begin="0.24s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="24.650118498440953" y="44" fill="white" font-size="100" ><animate attributeName="y" values="44;-6;44" begin="0.28s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="32.5837414342758" y="46" fill="white" font-size="100" ><animate attributeName="y" values="46;-4;46" begin="0.32s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="40.425204432948526" y="48" fill="white" font-size="100" ><animate attributeName="y" values="48;-2;48" begin="0.36s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="47.56802495307928" y="50" fill="white" font-size="100" ><animate attributeName="y" values="50;0;50" begin="0.4s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="53.516020738895165" y="52" fill="white" font-size="100" ><animate attributeName="y" values="52;2;52" begin="0.44s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="57.96164608835841" y="54" fill="white" font-size="100" ><animate attributeName="y" values="54;4;54" begin="0.48s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="60.834546557201534" y="56" fill="white" font-size="100" ><animate attributeName="y" values="56;6;56" begin="0.52s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="62.31266637872321" y="58" fill="white" font-size="100" ><animate attributeName="y" values="58;8;58" begin="0.56s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="62.79415498198926" y="60" fill="white" font-size="100" ><animate attributeName="y" values="60;10;60" begin="0.6s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="62.83450795149506" y="62" fill="white" font-size="100" ><animate attributeName="y" values="62;12;62" begin="0.64s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="63.05886648861391" y="64" fill="white" font-size="100" ><animate attributeName="y" values="64;14;64" begin="0.68s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="64.06332136150847" y="66" fill="white" font-size="100" ><animate attributeName="y" values="66;16;66" begin="0.72s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="66.32080327968514" y="68" fill="white" font-size="100" ><animate attributeName="y" values="68;18;68" begin="0.76s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="70.10641753376618" y="70" fill="white" font-size="100" ><animate attributeName="y" values="70;20;70" begin="0.8s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="75.4540109191172" y="72" fill="white" font-size="100" ><animate attributeName="y" values="72;22;72" begin="0.84s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="82.15082807108239" y="74" fill="white" font-size="100" ><animate attributeName="y" values="74;24;74" begin="0.88s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="89.77110085899754" y="76" fill="white" font-size="100" ><animate attributeName="y" values="76;26;76" begin="0.92s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="97.74326781222982" y="78" fill="white" font-size="100" ><animate attributeName="y" values="78;28;78" begin="0.96s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="105.44021110889369" y="80" fill="white" font-size="100" ><animate attributeName="y" values="80;30;80" begin="1s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="112.27826469085653" y="82" fill="white" font-size="100" ><animate attributeName="y" values="82;32;82" begin="1.04s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="117.80936230066492" y="84" fill="white" font-size="100" ><animate attributeName="y" values="84;34;84" begin="1.08s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="121.79177729151317" y="86" fill="white" font-size="100" ><animate attributeName="y" values="86;36;86" begin="1.12s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="124.22828594968708" y="88" fill="white" font-size="100" ><animate attributeName="y" values="88;38;88" begin="1.16s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="125.36572918000435" y="90" fill="white" font-size="100" ><animate attributeName="y" values="90;40;90" begin="1.2s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="125.6560417544831" y="92" fill="white" font-size="100" ><animate attributeName="y" values="92;42;92" begin="1.24s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="125.68490174898461" y="94" fill="white" font-size="100" ><animate attributeName="y" values="94;44;94" begin="1.28s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="126.07926485292775" y="96" fill="white" font-size="100" ><animate attributeName="y" values="96;46;96" begin="1.32s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="127.40838185143502" y="98" fill="white" font-size="100" ><animate attributeName="y" values="98;48;98" begin="1.36s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="130.0939264430513" y="100" fill="white" font-size="100" ><animate attributeName="y" values="100;50;100" begin="1.4s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="134.34342223450722" y="102" fill="white" font-size="100" ><animate attributeName="y" values="102;52;102" begin="1.44s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="140.11747932624684" y="104" fill="white" font-size="100" ><animate attributeName="y" values="104;54;104" begin="1.48s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="147.136013111462" y="106" fill="white" font-size="100" ><animate attributeName="y" values="106;56;106" begin="1.52s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="154.92246347700558" y="108" fill="white" font-size="100" ><animate attributeName="y" values="108;58;108" begin="1.56s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="162.87903316665066" y="110" fill="white" font-size="100" ><animate attributeName="y" values="110;60;110" begin="1.6s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="170.3810668234795" y="112" fill="white" font-size="100" ><animate attributeName="y" values="112;62;112" begin="1.64s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="176.87567033581504" y="114" fill="white" font-size="100" ><animate attributeName="y" values="114;64;114" begin="1.68s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="181.96900066041596" y="116" fill="white" font-size="100" ><animate attributeName="y" values="116;66;116" begin="1.72s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="185.48844497918125" y="118" fill="white" font-size="100" ><animate attributeName="y" values="118;68;118" begin="1.76s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="187.50987246771678" y="120" fill="white" font-size="100" ><animate attributeName="y" values="120;70;120" begin="1.8s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="188.34565622071892" y="122" fill="white" font-size="100" ><animate attributeName="y" values="122;72;122" begin="1.84s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="188.49535640878366" y="124" fill="white" font-size="100" ><animate attributeName="y" values="124;74;124" begin="1.88s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="188.566850711801" y="126" fill="white" font-size="100" ><animate attributeName="y" values="126;76;126" begin="1.92s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="189.18036379931866" y="128" fill="white" font-size="100" ><animate attributeName="y" values="128;78;128" begin="1.96s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="190.87054749272372" y="130" fill="white" font-size="100" ><animate attributeName="y" values="130;80;130" begin="2s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="194.00207099857332" y="132" fill="white" font-size="100" ><animate attributeName="y" values="132;82;132" begin="2.04s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="198.7120476592276" y="134" fill="white" font-size="100" ><animate attributeName="y" values="134;84;134" begin="2.08s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="204.8883877709402" y="136" fill="white" font-size="100" ><animate attributeName="y" values="136;86;136" begin="2.12s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="212.18749508345059" y="138" fill="white" font-size="100" ><animate attributeName="y" values="138;88;138" begin="2.16s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="220.08851309290404" y="140" fill="white" font-size="100" ><animate attributeName="y" values="140;90;140" begin="2.2s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="227.97555683121436" y="142" fill="white" font-size="100" ><animate attributeName="y" values="142;92;142" begin="2.24s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="235.23494756044244" y="144" fill="white" font-size="100" ><animate attributeName="y" values="144;94;144" begin="2.28s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="241.3520991519454" y="146" fill="white" font-size="100" ><animate attributeName="y" values="146;96;146" begin="2.32s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="245.9927599213663" y="148" fill="white" font-size="100" ><animate attributeName="y" values="148;98;148" begin="2.36s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="249.05578362006625" y="150" fill="white" font-size="100" ><animate attributeName="y" values="150;100;150" begin="2.4s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="250.68909820378022" y="152" fill="white" font-size="100" ><animate attributeName="y" values="152;102;152" begin="2.44s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="251.26635126104722" y="154" fill="white" font-size="100" ><animate attributeName="y" values="154;104;154" begin="2.48s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="251.32791927474523" y="156" fill="white" font-size="100" ><animate attributeName="y" values="156;106;156" begin="2.52s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="251.4955940572461" y="158" fill="white" font-size="100" ><animate attributeName="y" values="158;108;158" begin="2.56s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="252.37441549520398" y="160" fill="white" font-size="100" ><animate attributeName="y" values="160;110;160" begin="2.6s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="254.45714905507302" y="162" fill="white" font-size="100" ><animate attributeName="y" values="162;112;162" begin="2.64s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="258.0464889508844" y="164" fill="white" font-size="100" ><animate attributeName="y" values="164;114;164" begin="2.68s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="263.20726938349276" y="166" fill="white" font-size="100" ><animate attributeName="y" values="166;116;166" begin="2.72s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="269.7562286458361" y="168" fill="white" font-size="100" ><animate attributeName="y" values="168;118;168" begin="2.76s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="277.2909421169213" y="170" fill="white" font-size="100" ><animate attributeName="y" values="170;120;170" begin="2.8s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="285.2533562609643" y="172" fill="white" font-size="100" ><animate attributeName="y" values="172;122;172" begin="2.84s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="293.01789301020574" y="174" fill="white" font-size="100" ><animate attributeName="y" values="174;124;174" begin="2.88s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="299.99021478659614" y="176" fill="white" font-size="100" ><animate attributeName="y" values="176;126;176" begin="2.92s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text><text x="305.70105733707186" y="178" fill="white" font-size="100" ><animate attributeName="y" values="178;128;178" begin="2.96s" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="y" 
+               values="{i/2+30};{i/2-20};{i/2+30}" 
+               begin="{i/100}s" 
+               dur="1s" 
+               repeatCount="indefinite" />
+      PSVG
+    </text></g></g></svg>

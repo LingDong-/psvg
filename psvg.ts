@@ -144,33 +144,59 @@ function transpilePSVG(prgm:PSVGElement[]):string{
   }
 
   let builtins : Record<string,string> = {
-    NTH:(function(x:any[],i:number):any{
+    NTH:(function(x:any[]|string,i:number):any{
+      if (typeof x == 'string'){
+        x = __tolist(x);
+      }
       return x[i];
     }).toString(),
-    TAKE:(function(x:any[],n:number):any[]{
+    TAKE:(function(x:any[]|string,n:number):any[]{
+      if (typeof x == 'string'){
+        x = __tolist(x);
+      }
       return __makelist(x.slice(0,n));
     }).toString(),
-    DROP:(function(x:any[],n:number):any[]{
+    DROP:(function(x:any[]|string,n:number):any[]{
+      if (typeof x == 'string'){
+        x = __tolist(x);
+      }
       return __makelist(x.slice(n));
     }).toString(),
-    UPDATE:(function(x:any[],i:number,y:any):any[]{
+    UPDATE:(function(x:any[]|string,i:number,y:any):any[]{
+      if (typeof x == 'string'){
+        x = __tolist(x);
+      }
       let z = x.slice();
       z[i]=y;
       return __makelist(z);
     }).toString(),
-    MAP:(function(x:any[],f:(x:any)=>any):any[]{
+    MAP:(function(x:any[]|string,f:(x:any)=>any):any[]{
+      if (typeof x == 'string'){
+        x = __tolist(x);
+      }
       return __makelist(x.map(y=>f(__val(y))));
     }).toString(),
-    FILTER:(function(x:any[],f:(x:any)=>any):any[]{
+    FILTER:(function(x:any[]|string,f:(x:any)=>any):any[]{
+      if (typeof x == 'string'){
+        x = __tolist(x);
+      }
       return __makelist(x.filter(y=>f(__val(y))));
     }).toString(),
-    COUNT:(function(x:any[]):number{
+    COUNT:(function(x:any[]|string):number{
+      if (typeof x == 'string'){
+        x = __tolist(x);
+      }
       return x.length;
     }).toString(),
-    CAT:(function(...args:string[]):any[]{
-      return __makelist([].concat(...args.filter(y=>y.toString().length)));
+    CAT:(function(...args:any):any[]{
+      return __makelist([].concat(...args.filter((y:any)=>y.toString().length).map(
+        (x:any)=>(typeof x=='string')?__tolist(x):x
+      )));
     }).toString(),
-    REV:(function(x:any[]):any[]{
+    REV:(function(x:any[]|string):any[]{
+      if (typeof x == 'string'){
+        x = __tolist(x);
+      }
       return __makelist(x.slice().reverse());
     }).toString(),
     FILL:(function(x:any,n:number):any[]{
@@ -300,7 +326,23 @@ function transpilePSVG(prgm:PSVGElement[]):string{
         }
         out += ">`;";
         groups++;
-
+      }else if (prgm[i].tagName.toUpperCase() == "FONT"){
+        out += "__out+=`<g ";
+        for (var k in prgm[i].attributes){
+          out += `${{
+            family:"font-family",
+            font:"font-family",
+            style:"font-style",
+            variant:"font-variant",
+            stretch:"font-stretch",
+            size:"font-size",
+            anchor:"text-anchor",
+            weight:"font-weight",
+            decoration:"text-decoration",
+          }[k]}="\${${transpileValue(prgm[i].attributes[k])}}" `
+        }
+        out += ">`;";
+        groups++;
       }else if (prgm[i].tagName.toUpperCase() == "SCALE"){
         out += `__out+=\`<g transform="scale(\${${transpileValue(prgm[i].attributes.x)}} \${${transpileValue(prgm[i].attributes.y)}})">\`;`
         groups++;
@@ -368,12 +410,10 @@ function transpilePSVG(prgm:PSVGElement[]):string{
         let needInner = ["TEXT","STYLE"]['includes'](prgm[i].tagName.toUpperCase());
         if (prgm[i].children.length || needInner){
           out += ">`;";
+          out += transpilePSVGList(prgm[i].children);
           if (needInner){
-            out += "__out+=`"+prgm[i].innerHTML.replace(/`/g,"/`")+"`;";
-          }else{
-            out += transpilePSVGList(prgm[i].children);
+            out += "__out+=`"+prgm[i].innerHTML.replace(/`/g,"/`").replace(/<.*?>/g,"")+"`;";
           }
-          
           out += "__out+='</"+prgm[i].tagName+">';";
         }else{
           out += "/>`;";

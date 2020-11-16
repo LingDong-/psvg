@@ -1,6 +1,8 @@
+[![](examples/textanim.svg)](examples/textanim.psvg)
+
 # PSVG - Programmable SVG
 
-**[Doc](QUICKSTART.md) | [Playground]() | [Examples](examples/)**
+**[Doc](QUICKSTART.md) | [Playground](https://psvg.netlify.app/) | [Examples](examples/)**
 
 PSVG is an extension of the SVG (Scalable Vector Graphics) format that introduces programming language features like functions, control flows, and variables -- Instead of writing a program that draws a picture, write a picture that draws itself!
 
