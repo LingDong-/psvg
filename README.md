@@ -6,6 +6,8 @@ PSVG is an extension of the SVG (Scalable Vector Graphics) format that introduce
 
 PSVG is compliant with XML and HTML specs, so it can be easily embeded in a webpage or edited with an XML editor.
 
+> Note: Experimental and under development, currently the compiler is not very friendly and might misbehave at times; Contributions/Issues welcome.
+
 For example, define a recursive function that draws the Sierpiński's triangle:
 
 ```xml
@@ -84,7 +86,7 @@ To transform shapes in vanilla SVG, the "group" metaphor (`<g transform="...">`)
 </def-pythtree>
 ```
 
-You can have your own pick of degree or radians: `<rotate deg="45">` or `<rotate rad="{PI/8}"/>` are the same. You can also use `<scale x="2" y="2"/>` to scale subsequent drawings.
+You can have your own pick of degree or radians: `<rotate deg="45">` or `<rotate rad="{PI/4}"/>` are the same. You can also use `<scale x="2" y="2"/>` to scale subsequent drawings.
 
 Similarly, styling can also be written as commands to effect subsequent draw calls:
 

@@ -25,7 +25,21 @@ function parsePSVG(str:string) : PSVGElement[] {
           return open.trim().split(" ")[0];
         }
         function getAttributes(open:string){
-          return Object['fromEntries'](Array['from'](open.split(" ").slice(1).join(" ")['matchAll'](/(^| )([^ ]+?)\="([^"]*)"/g)).map((x:string)=>x.slice(2)));
+          // oneliner doesn't work for safari:
+          // return Object['fromEntries'](Array['from'](open.split(" ").slice(1).join(" ")['matchAll'](/(^| )([^ ]+?)\="([^"]*)"/g)).map((x:string)=>x.slice(2)));
+          
+          // stupid polyfill for safari:
+          let thing1:any = open.split(" ").slice(1).join(" ");
+          let thing2:any = thing1['matchAll'];
+          if (!thing2){
+            thing2 = function(re:any){let ms = [];let m:any;while(1) {m =re.exec(thing1);if(m)ms.push(m);else break;}return ms;}
+          }else{
+            thing2 = function(re:any){return thing1.matchAll(re)}
+          }
+          if (!Object['fromEntries']){
+            Object['fromEntries']=function(a:any){var o:any={};a.map((x:any)=>o[x[0]]=x[1]);return o}
+          }
+          return Object['fromEntries'](Array['from'](thing2(/(^| )([^ ]+?)\="([^"]*)"/g)).map((x:string)=>x.slice(2)));
         }
         if (j0 != -1){
           let open = str.slice(i+1,j0-1);
@@ -192,7 +206,9 @@ function transpilePSVG(prgm:PSVGElement[]):string{
       if (new RegExp(/^[+-]?(\d+([.]\d*)?([eE][+-]?\d+)?|[.]\d+([eE][+-]?\d+)?)$/g).test(x)){
         return x;
       }
-      return '__val(`'+x.replace(/(?<!\\)\{/g,"${") + "`)";
+      // crappy safari doesn't support lookbehind yet
+      // return '__val(`'+x.replace(/(?<!\\)\{/g,"${") + "`)";
+      return '__val(`'+x.replace(/([^\\]|^)\{/g,'$1${') + "`)";
     }
     for (var i = 0; i < prgm.length; i++){
       if (prgm[i].tagName.toUpperCase() == "PSVG"){
@@ -297,7 +313,7 @@ function transpilePSVG(prgm:PSVGElement[]):string{
           out += `${k}=${transpileValue(prgm[i].attributes[k])};`
         }
       }else if (prgm[i].tagName.toUpperCase() == "RETURN"){
-        for (var i = 0; i < groups; i++){
+        for (var j = 0; j < groups; j++){
           out += "__out+='</g>';"
         }
         if (prgm[i].attributes.value){

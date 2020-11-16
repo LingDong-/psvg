@@ -52,6 +52,16 @@ This is also handy for `path` `d`ata or `polyline` `points`:
 <path d="M {x} {y} L 0 0"/>
 ```
 
+To modify a variable, use `asgn` (or `assign`, if you dislike the abbreviation):
+
+```xml
+<var x="42">
+<asgn x="41"/>
+<assign x="{x+1}"/>
+```
+
+If you're curious why `set` is not used as the intuitive assignment keyword, it's because SVG spec took it already.
+
 ## Control Flow
 
 Simple if statements:
