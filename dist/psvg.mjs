@@ -1,4 +1,4 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true});// psvg.ts
+// psvg.ts
 function parsePSVG(str) {
   str = str.replace(/<!--[^\0]*?-->/gm, "");
   let i = 0;
@@ -429,9 +429,9 @@ if (typeof window !== "undefined") {
     }
   });
 }
-
-
-
-
-
-exports.compilePSVG = compilePSVG; exports.evalPSVG = evalPSVG; exports.parsePSVG = parsePSVG; exports.transpilePSVG = transpilePSVG;
+export {
+  compilePSVG,
+  evalPSVG,
+  parsePSVG,
+  transpilePSVG
+};
