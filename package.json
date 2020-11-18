@@ -1,6 +1,6 @@
 {
   "name": "@lingdong/psvg",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Programmable Scalable Vector Graphics -- drawings that draw themselves",
   "main": "dist/psvg.js",
   "module": "dist/psvg.mjs",
