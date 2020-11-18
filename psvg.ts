@@ -1,15 +1,15 @@
-interface PSVGElement {
+export interface PSVGElement {
   tagName:string;
   children:PSVGElement[];
   attributes:Record<string,string>;
   innerHTML:string;
 }
-interface PSVGFunc {
+export interface PSVGFunc {
   name:string;
   args:string[];
 }
 
-function parsePSVG(str:string) : PSVGElement[] {
+export function parsePSVG(str:string) : PSVGElement[] {
   str = str.replace(/<!--[^\0]*?-->/gm,"");
   let i : number = 0;
   let elts : PSVGElement[]=[];
@@ -39,6 +39,7 @@ function parsePSVG(str:string) : PSVGElement[] {
           if (!Object['fromEntries']){
             Object['fromEntries']=function(a:any){var o:any={};a.map((x:any)=>o[x[0]]=x[1]);return o}
           }
+          // @ts-ignore
           return Object['fromEntries'](Array['from'](thing2(/(^| )([^ ]+?)\="([^"]*)"/g)).map((x:string)=>x.slice(2)));
         }
         if (j0 != -1){
@@ -110,7 +111,7 @@ function parsePSVG(str:string) : PSVGElement[] {
 }
 
 
-function transpilePSVG(prgm:PSVGElement[]):string{
+export function transpilePSVG(prgm:PSVGElement[]):string{
   let funcs : Record<string,PSVGFunc> = {};
   function __val(x:string):any{
     if (new RegExp(/^[+-]?(\d+([.]\d*)?([eE][+-]?\d+)?|[.]\d+([eE][+-]?\d+)?)$/g).test(x)){
@@ -427,11 +428,11 @@ function transpilePSVG(prgm:PSVGElement[]):string{
   }
 }
 
-function evalPSVG(js:string):any{
+export function evalPSVG(js:string):any{
   return Function(`"use strict";${js};return __out;`)();
 }
 
-function compilePSVG(psvg:string):any{
+export function compilePSVG(psvg:string):any{
   let prgm = parsePSVG(psvg);
   // console.dir(prgm,{depth:null});
   let js = transpilePSVG(prgm);
@@ -439,22 +440,12 @@ function compilePSVG(psvg:string):any{
   return evalPSVG(js);
 }
 
+if (typeof window !== 'undefined') {
+  window.addEventListener('load',function(){
+    const psvgs = document.getElementsByTagName("PSVG");
+    for (let i = 0; i < psvgs.length; i++){
+      psvgs[i].outerHTML = compilePSVG(psvgs[i].outerHTML);
+    }
+  })
+}
 
-/*@ts-ignore*/
-/*@ts-ignore*/if (typeof module != 'undefined') {
-/*@ts-ignore*/  if (!module.parent){
-/*@ts-ignore*/    const fs = require('fs');
-/*@ts-ignore*/    if (!process.argv[2]){console.log("usage: psvg input.psvg > output.svg");process.exit()}
-/*@ts-ignore*/    console.log(compilePSVG(fs.readFileSync(process.argv[2]).toString()));
-/*@ts-ignore*/  }else{
-/*@ts-ignore*/    module.exports = {parsePSVG,transpilePSVG,evalPSVG,compilePSVG};
-/*@ts-ignore*/  }
-/*@ts-ignore*/}else{
-/*@ts-ignore*/  window.addEventListener('load',function(){
-/*@ts-ignore*/    const psvgs = document.getElementsByTagName("PSVG");
-/*@ts-ignore*/    for (let i = 0; i < psvgs.length; i++){
-/*@ts-ignore*/      psvgs[i].outerHTML = compilePSVG(psvgs[i].outerHTML);
-/*@ts-ignore*/    }
-/*@ts-ignore*/  })
-/*@ts-ignore*/}
-/*@ts-ignore*/

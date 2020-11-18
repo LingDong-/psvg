@@ -1,7 +1,10 @@
 const fs = require('fs');
-var exampleNames = fs.readdirSync('../examples').filter(x=>x.endsWith(".psvg"));
+const path = require('path');
+const examplePath = path.resolve(__dirname, "../examples")
+const outPath = path.resolve(__dirname, "../site/index.html")
+var exampleNames = fs.readdirSync(examplePath).filter(x=>x.endsWith(".psvg"));
 exampleNames.sort();
-var exampleTexts = exampleNames.map(x=>fs.readFileSync('../examples/'+x).toString())
+var exampleTexts = exampleNames.map(x=>fs.readFileSync(path.join(examplePath, x)).toString())
 var examples = {};
 exampleNames.map((x,i)=>examples[x]=exampleTexts[i]);
 
@@ -55,7 +58,7 @@ let html=`
   <hr style="position: absolute;left:0px;top:40px;width:100%"/>
 </body>
 <script>
-  ${fs.readFileSync("../dist/psvg.js").toString()}
+  ${fs.readFileSync(path.resolve(__dirname, "../dist/psvg.global.js")).toString()}
 </script>
 <script>
   var themeName = "${themeName}";
@@ -85,7 +88,7 @@ function main(){
   });
 
   CM.setValue(examples["koch.psvg"]);
-  document.getElementById('o').innerHTML = compilePSVG(examples["koch.psvg"]);
+  document.getElementById('o').innerHTML = PSVG.compilePSVG(examples["koch.psvg"]);
   document.getElementById('s').value = "koch.psvg";
   document.getElementById('s').onchange = function(){
     CM.setValue(examples[document.getElementById('s').value]);
@@ -93,9 +96,9 @@ function main(){
   }
 
   document.getElementById('r').onclick = function(){
-    document.getElementById('o').innerHTML = compilePSVG(CM.getValue());
+    document.getElementById('o').innerHTML = PSVG.compilePSVG(CM.getValue());
   }
 }
 
 
-fs.writeFileSync("../site/index.html",html);
+fs.writeFileSync(outPath,html);
