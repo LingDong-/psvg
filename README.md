@@ -2,7 +2,7 @@
 
 # PSVG - Programmable SVG
 
-**[Doc](QUICKSTART.md) | [Playground](https://psvg.netlify.app/) | [Examples](examples/)**
+**[Doc](QUICKSTART.md) | [Playground](https://psvg.netlify.app/) | [Examples](examples/) | [NPM](https://www.npmjs.com/package/@lingdong/psvg)**
 
 PSVG is an extension of the SVG (Scalable Vector Graphics) format that introduces programming language features like functions, control flows, and variables -- Instead of writing a program that draws a picture, write a picture that draws itself!
 
