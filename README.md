@@ -125,7 +125,13 @@ For example, to compile the hilbert curve example in this repo:
 node dist/psvg.js examples/hilbert.psvg > examples/hibert.svg
 ```
 
-Alternatively you can use things like the shebang trick, `pkg` tool, bash alias etc. to make it appear as an executable, and:
+Alternatively install it globally via [npm](http://npmjs.com/package/@lingdong/psvg):
+
+```
+npm i -g @lingdong/psvg
+```
+
+and use it with:
 
 ```
 psvg input.svg > output.svg
@@ -139,6 +145,12 @@ The original source code is all in one file, `psvg.ts`, so you can also use `ts-
 <script src="psvg.js"></script>
 ```
 
+or via CDN, for example
+
+```html
+<script src="http://unpkg.com/@lingdong/psvg"></script>
+```
+
 By including the script, all the `<psvg>` elements on the webpage will be compiled to `<svg>` when the page loads. Again, don't include PSVG files that you don't trust.
 
 ### As a library
@@ -146,12 +158,12 @@ By including the script, all the `<psvg>` elements on the webpage will be compil
 In node:
 
 ```js
-const {compilePSVG} = require("./psvg");
+const { compilePSVG } = require("./psvg");
 console.log(compilePSVG("<psvg>...</psvg>"));
 ```
 
 Additionally, `parsePSVG()` `transpilePSVG()` and `evalPSVG()` which are individual steps of compilation are also exported.
 
-In browser, `compilePSVG` and others are available globally. 
+In browser, functions are exported under global variable `PSVG`. 
 
 **Check out [QUICKSTART.md](QUICKSTART.md) for a quick introduction to the PSVG language.**
