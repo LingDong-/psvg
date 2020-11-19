@@ -12,7 +12,7 @@ function parsePSVG(str) {
       let lvl = 0;
       function parseElement() {
         function getTagName(open) {
-          return open.trim().split(" ")[0];
+          return open.trim().split(" ")[0].trimEnd();
         }
         function getAttributes(open) {
           let thing1 = open.split(" ").slice(1).join(" ");

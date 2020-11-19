@@ -22,7 +22,7 @@ export function parsePSVG(str:string) : PSVGElement[] {
       let lvl = 0;
       function parseElement():void{
         function getTagName(open:string){
-          return open.trim().split(" ")[0];
+          return open.trim().split(" ")[0].trimEnd();
         }
         function getAttributes(open:string){
           // oneliner doesn't work for safari:
