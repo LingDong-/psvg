@@ -16,8 +16,8 @@ export function parsePSVG(str:string) : PSVGElement[] {
   while (i <= str.length){
     if (str[i] == "<"){
       let j = i+1;
-      let j0 = -1;
-      let j1 = -1;
+      let bodyStart = -1;
+      let bodyEnd = -1;
       let quote = false;
       let lvl = 0;
       function parseElement():void{
@@ -42,10 +42,10 @@ export function parsePSVG(str:string) : PSVGElement[] {
           // @ts-ignore
           return Object['fromEntries'](Array['from'](thing2(/(^| )([^ ]+?)\="([^"]*)"/g)).map((x:string)=>x.slice(2)));
         }
-        if (j0 != -1){
-          const open = str.slice(i+1,j0-1);
-          const body = str.slice(j0,j1);
-          // const close = str.slice(j1,j+1);
+        if (bodyStart != -1){
+          const open = str.slice(i+1,bodyStart-1);
+          const body = str.slice(bodyStart,bodyEnd);
+          // const close = str.slice(bodyStart,j+1);
           const elt : PSVGElement = {
             tagName: getTagName(open),
             attributes: getAttributes(open),
@@ -72,15 +72,15 @@ export function parsePSVG(str:string) : PSVGElement[] {
           quote = !quote;
         }
         if (!quote){
-          if (str[j] == ">" && lvl == 0 && j0 == -1){
-            j0 = j+1;
+          if (str[j] == ">" && lvl == 0 && bodyStart == -1){
+            bodyStart = j+1;
           }
 
           if (str[j] == "<"){
             if (str[j+1] == "/"){
               lvl--;
               if (lvl == -1){
-                j1 = j;
+                bodyEnd = j;
               }
               while(str[j] != ">"){
                 j++;
