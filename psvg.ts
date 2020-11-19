@@ -10,7 +10,7 @@ export interface PSVGFunc {
 }
 
 export function parsePSVG(str:string) : PSVGElement[] {
-  str = str.replace(/<!--[^\0]*?-->/gm,"");
+  str = str.replace(/<!--[^\0]*-->/gm,"");
   let i : number = 0;
   let elts : PSVGElement[]=[];
   while (i <= str.length){
