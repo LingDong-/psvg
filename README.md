@@ -125,7 +125,7 @@ For example, to compile the hilbert curve example in this repo:
 node dist/psvg.js examples/hilbert.psvg > examples/hibert.svg
 ```
 
-Alternatively install it globally via [npm](http://npmjs.com/package/@lingdong/psvg):
+Alternatively you can install it globally via [npm](http://npmjs.com/package/@lingdong/psvg):
 
 ```
 npm i -g @lingdong/psvg
