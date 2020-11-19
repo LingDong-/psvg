@@ -12,12 +12,12 @@ export interface PSVGFunc {
 export function parsePSVG(str:string) : PSVGElement[] {
   str = str.replace(/<!--[^\0]*?-->/gm,"");
   let i : number = 0;
-  let elts : PSVGElement[]=[];
+  const elts : PSVGElement[]=[];
   while (i <= str.length){
     if (str[i] == "<"){
       let j = i+1;
-      let j0 = -1;
-      let j1 = -1;
+      let bodyStart = -1;
+      let bodyEnd = -1;
       let quote = false;
       let lvl = 0;
       function parseElement():void{
@@ -29,7 +29,7 @@ export function parsePSVG(str:string) : PSVGElement[] {
           // return Object['fromEntries'](Array['from'](open.split(" ").slice(1).join(" ")['matchAll'](/(^| )([^ ]+?)\="([^"]*)"/g)).map((x:string)=>x.slice(2)));
           
           // stupid polyfill for safari:
-          let thing1:any = open.split(" ").slice(1).join(" ");
+          const thing1:any = open.split(" ").slice(1).join(" ");
           let thing2:any = thing1['matchAll'];
           if (!thing2){
             thing2 = function(re:any){let ms = [];let m:any;while(1) {m =re.exec(thing1);if(m)ms.push(m);else break;}return ms;}
@@ -42,11 +42,11 @@ export function parsePSVG(str:string) : PSVGElement[] {
           // @ts-ignore
           return Object['fromEntries'](Array['from'](thing2(/(^| )([^ ]+?)\="([^"]*)"/g)).map((x:string)=>x.slice(2)));
         }
-        if (j0 != -1){
-          let open = str.slice(i+1,j0-1);
-          let body = str.slice(j0,j1);
-          // let close = str.slice(j1,j+1);
-          let elt : PSVGElement = {
+        if (bodyStart != -1){
+          const open = str.slice(i+1,bodyStart-1);
+          const body = str.slice(bodyStart,bodyEnd);
+          // const close = str.slice(bodyStart,j+1);
+          const elt : PSVGElement = {
             tagName: getTagName(open),
             attributes: getAttributes(open),
             children: parsePSVG(body),
@@ -54,8 +54,8 @@ export function parsePSVG(str:string) : PSVGElement[] {
           };
           elts.push(elt);
         }else{
-          let open = str.slice(i+1,j);
-          let elt : PSVGElement = {
+          const open = str.slice(i+1,j);
+          const elt : PSVGElement = {
             tagName: getTagName(open),
             attributes: getAttributes(open),
             children: [],
@@ -72,15 +72,15 @@ export function parsePSVG(str:string) : PSVGElement[] {
           quote = !quote;
         }
         if (!quote){
-          if (str[j] == ">" && lvl == 0 && j0 == -1){
-            j0 = j+1;
+          if (str[j] == ">" && lvl == 0 && bodyStart == -1){
+            bodyStart = j+1;
           }
 
           if (str[j] == "<"){
             if (str[j+1] == "/"){
               lvl--;
               if (lvl == -1){
-                j1 = j;
+                bodyEnd = j;
               }
               while(str[j] != ">"){
                 j++;
