@@ -1,5 +1,6 @@
 <!-- text-anim.psvg      -->
 <!-- draws animated text -->
+<!-- try begin="{-i/100}s" to make animation start from the beginning -->
 
 <psvg width="600" height="230">
   
