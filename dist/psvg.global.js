@@ -35,30 +35,28 @@ var PSVG = (() => {
           let bodyEnd = -1;
           let quote = false;
           let lvl = 0;
+          const getTagName = (open) => open.trim().split(" ")[0].trimEnd();
+          const getAttributes = (open) => {
+            const attrsStr = open.split(" ").slice(1).join(" ");
+            const matchAll = attrsStr.matchAll || ((re) => {
+              const ms = [];
+              while (1) {
+                const m = re.exec(attrsStr);
+                if (m)
+                  ms.push(m);
+                else
+                  break;
+              }
+              return ms;
+            });
+            const fromEntries = Object.fromEntries || ((a) => {
+              const o = {};
+              a.map(([key, value]) => o[key] = value);
+              return o;
+            });
+            return fromEntries(Array["from"](matchAll(/(^| )([^ ]+?)\="([^"]*)"/g)).map((x) => x.slice(2)));
+          };
           function parseElement() {
-            function getTagName(open) {
-              return open.trim().split(" ")[0].trimEnd();
-            }
-            function getAttributes(open) {
-              const attrsStr = open.split(" ").slice(1).join(" ");
-              const matchAll = attrsStr.matchAll || ((re) => {
-                const ms = [];
-                while (1) {
-                  const m = re.exec(attrsStr);
-                  if (m)
-                    ms.push(m);
-                  else
-                    break;
-                }
-                return ms;
-              });
-              const fromEntries = Object.fromEntries || ((a) => {
-                const o = {};
-                a.map(([key, value]) => o[key] = value);
-                return o;
-              });
-              return fromEntries(Array["from"](matchAll(/(^| )([^ ]+?)\="([^"]*)"/g)).map((x) => x.slice(2)));
-            }
             if (bodyStart != -1) {
               const open = str.slice(i + 1, bodyStart - 1);
               const body = str.slice(bodyStart, bodyEnd);

@@ -20,11 +20,10 @@ export function parsePSVG(str:string) : PSVGElement[] {
       let bodyEnd = -1;
       let quote = false;
       let lvl = 0;
-      function parseElement():void{
-        function getTagName(open:string){
-          return open.trim().split(" ")[0].trimEnd();
-        }
-        function getAttributes(open:string){
+
+      const getTagName = (open: string) => open.trim().split(" ")[0].trimEnd();
+
+      const getAttributes = (open: string) => {
           // oneliner doesn't work for safari:
           // return Object['fromEntries'](Array['from'](open.split(" ").slice(1).join(" ")['matchAll'](/(^| )([^ ]+?)\="([^"]*)"/g)).map((x:string)=>x.slice(2)));
 
@@ -49,7 +48,9 @@ export function parsePSVG(str:string) : PSVGElement[] {
 
           // @ts-ignore
           return fromEntries(Array['from'](matchAll(/(^| )([^ ]+?)\="([^"]*)"/g)).map((x:string)=>x.slice(2)));
-        }
+      };
+
+      function parseElement():void{
         if (bodyStart != -1){
           const open = str.slice(i+1,bodyStart-1);
           const body = str.slice(bodyStart,bodyEnd);
@@ -72,6 +73,7 @@ export function parsePSVG(str:string) : PSVGElement[] {
           elts.push(elt);
         }
       }
+
       while (j <= str.length){
         if (str[j]=='\\'){
           j++;
