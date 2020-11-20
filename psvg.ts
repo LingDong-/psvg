@@ -30,7 +30,7 @@ export function parsePSVG(str:string) : PSVGElement[] {
           // stupid polyfill for safari:
           const attrsStr = open.split(" ").slice(1).join(" ");
 
-          const matchAll = (re:RegExp)=>attrsStr.matchAll(re) || ((re: RegExp) => {
+          const matchAll = attrsStr.matchAll ? (re:RegExp)=>attrsStr.matchAll(re) : ((re: RegExp) => {
             const ms: RegExpMatchArray[] = [];
             while (1) {
               const m = re.exec(attrsStr);
