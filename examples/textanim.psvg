@@ -1,5 +1,6 @@
 <!-- text-anim.psvg      -->
 <!-- draws animated text -->
+<!-- try begin="{-i/100}s" to make animation start from the beginning -->
 
 <psvg width="600" height="230">
   
@@ -16,12 +17,12 @@
           font-size="46">
       <animate attributeName="x" 
                values="{WIDTH-i+10};{WIDTH-i-10};{WIDTH-i+10}" 
-               begin="{-i/100}s" 
+               begin="{i/100}s" 
                dur="1s" 
                repeatCount="indefinite" />
       <animate attributeName="fill" 
                values="rgb(255,{i},{255-i});rgb(255,{255-i},{i});rgb(255,{i},{255-i})" 
-               begin="{-i/100}s" 
+               begin="{i/100}s" 
                dur="1s" 
                repeatCount="indefinite" />
       Draws itself!
@@ -34,7 +35,7 @@
           font-size="100">
       <animate attributeName="y" 
                values="{i/2+30};{i/2-20};{i/2+30}" 
-               begin="{-i/100}s" 
+               begin="{i/100}s" 
                dur="1s" 
                repeatCount="indefinite" />
       PSVG
