@@ -3,3 +3,4 @@ tests/
 **/.DS_Store
 node_modules/
 site/index.html
+dist

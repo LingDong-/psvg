@@ -6,7 +6,7 @@
 
 PSVG is an extension of the SVG (Scalable Vector Graphics) format that introduces programming language features like functions, control flows, and variables -- Instead of writing a program that draws a picture, write a picture that draws itself!
 
-PSVG is compliant with XML and HTML specs, so it can be easily embeded in a webpage or edited with an XML editor.
+PSVG is compliant with XML and HTML specs, so it can be easily embedded in a webpage or edited with an XML editor.
 
 This repo contains a [PSVG→SVG complier](psvg.ts) that transforms PSVG files to just regular SVG's. It can also automatically render all PSVG's on an HTML page when included as a `<script>`.
 
@@ -111,25 +111,13 @@ In addition to simple fractals shown above, PSVG is also capable of implementing
 
 A baseline PSVG to SVG complier is included in this repo. It is a very "quick-and-dirty" implementation that `eval()`s transpiled JavaScript. So for now, don't compile files you don't trust!
 
-### As commandline tool
+### As command-line tool
 
-Grab `dist/psvg.js` and run
+Install it globally via [`npm`](https://www.npmjs.com/)
 
-```
-node psvg.js path/to/input.psvg > path/to/out.svg
-```
-
-For example, to compile the hilbert curve example in this repo:
-
-```
-node dist/psvg.js examples/hilbert.psvg > examples/hibert.svg
-```
-
-Alternatively you can install it globally via [npm](http://npmjs.com/package/@lingdong/psvg):
-
-```
-npm i -g @lingdong/psvg
-```
+<pre>
+npm i -g <a href="http://npmjs.com/package/@lingdong/psvg">@lingdong/psvg</a>
+</pre>
 
 and use it with:
 
@@ -137,15 +125,21 @@ and use it with:
 psvg input.svg > output.svg
 ```
 
-The original source code is all in one file, `psvg.ts`, so you can also use `ts-node` to run that directly instead (or recompile with `tsc` to make sure you get the absolutely newest version).
+For example, to compile the hilbert curve example in this repo:
+
+```
+psvg examples/hilbert.psvg > examples/hibert.svg
+```
+
+or try it without installing via [`npx`](https://www.npmjs.com/package/npx) (comes together with npm)
+
+```
+npx -s @lingdong/psvg input.svg > output.svg
+```
 
 ### For the browser
 
-```html
-<script src="psvg.js"></script>
-```
-
-or via CDN, for example
+PSVG is also available for browser via CDN, or [directly download](http://unpkg.com/@lingdong/psvg)
 
 ```html
 <script src="http://unpkg.com/@lingdong/psvg"></script>
@@ -155,15 +149,28 @@ By including the script, all the `<psvg>` elements on the webpage will be compil
 
 ### As a library
 
-In node:
+Install locally in your project via npm
+
+```
+npm i @lingdong/psvg
+```
 
 ```js
-const { compilePSVG } = require("./psvg");
-console.log(compilePSVG("<psvg>...</psvg>"));
+import { compilePSVG } from "@lingdong/psvg"
+
+console.log(compilePSVG("<psvg>...</psvg>"))
+```
+
+Or
+
+```js
+const { compilePSVG } = require("@lingdong/psvg")
+
+console.log(compilePSVG("<psvg>...</psvg>"))
 ```
 
 Additionally, `parsePSVG()` `transpilePSVG()` and `evalPSVG()` which are individual steps of compilation are also exported.
 
-In browser, functions are exported under global variable `PSVG`. 
+In browsers, functions are exported under the global variable `PSVG`.
 
 **Check out [QUICKSTART.md](QUICKSTART.md) for a quick introduction to the PSVG language.**
