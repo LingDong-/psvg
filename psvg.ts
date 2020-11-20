@@ -437,11 +437,11 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
   }
 }
 
-export function evalPSVG(js:string):any{
+export function evalPSVG(js:string):string {
   return Function(`"use strict";${js};return __out;`)();
 }
 
-export function compilePSVG(psvg:string):any{
+export function compilePSVG(psvg:string):string {
   let prgm = parsePSVG(psvg);
   // console.dir(prgm,{depth:null});
   let js = transpilePSVG(prgm);
