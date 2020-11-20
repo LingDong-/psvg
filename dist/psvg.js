@@ -13,10 +13,10 @@ function parsePSVG(str) {
       const getTagName = (open) => open.trim().split(" ")[0].trimEnd();
       const getAttributes = (open) => {
         const attrsStr = open.split(" ").slice(1).join(" ");
-        const matchAll = attrsStr.matchAll || ((re) => {
+        const matchAll = (re) => attrsStr.matchAll(re) || ((re2) => {
           const ms = [];
           while (1) {
-            const m = re.exec(attrsStr);
+            const m = re2.exec(attrsStr);
             if (m)
               ms.push(m);
             else
