@@ -27,20 +27,28 @@ export function parsePSVG(str:string) : PSVGElement[] {
         function getAttributes(open:string){
           // oneliner doesn't work for safari:
           // return Object['fromEntries'](Array['from'](open.split(" ").slice(1).join(" ")['matchAll'](/(^| )([^ ]+?)\="([^"]*)"/g)).map((x:string)=>x.slice(2)));
-          
+
           // stupid polyfill for safari:
-          const thing1:any = open.split(" ").slice(1).join(" ");
-          let thing2:any = thing1['matchAll'];
-          if (!thing2){
-            thing2 = function(re:any){let ms = [];let m:any;while(1) {m =re.exec(thing1);if(m)ms.push(m);else break;}return ms;}
-          }else{
-            thing2 = function(re:any){return thing1.matchAll(re)}
-          }
-          if (!Object['fromEntries']){
-            Object['fromEntries']=function(a:any){var o:any={};a.map((x:any)=>o[x[0]]=x[1]);return o}
-          }
+          const attrsStr = open.split(" ").slice(1).join(" ");
+
+          const matchAll = attrsStr.matchAll || ((re: RegExp) => {
+            const ms: RegExpMatchArray[] = [];
+            while (1) {
+              const m = re.exec(attrsStr);
+              if (m) ms.push(m);
+              else break;
+            }
+            return ms;
+          });
+
+          const fromEntries = Object.fromEntries || ((a: any) => {
+            const o = {};
+            a.map(([key, value]) => o[key] = value);
+            return o;
+          });
+
           // @ts-ignore
-          return Object['fromEntries'](Array['from'](thing2(/(^| )([^ ]+?)\="([^"]*)"/g)).map((x:string)=>x.slice(2)));
+          return fromEntries(Array['from'](matchAll(/(^| )([^ ]+?)\="([^"]*)"/g)).map((x:string)=>x.slice(2)));
         }
         if (bodyStart != -1){
           const open = str.slice(i+1,bodyStart-1);
@@ -448,4 +456,3 @@ if (typeof window !== 'undefined') {
     }
   })
 }
-
