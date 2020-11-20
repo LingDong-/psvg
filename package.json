@@ -1,6 +1,6 @@
 {
   "name": "@lingdong/psvg",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Programmable Scalable Vector Graphics -- drawings that draw themselves",
   "main": "dist/psvg.js",
   "module": "dist/psvg.mjs",
@@ -10,7 +10,12 @@
   "bin": {
     "psvg": "bin/psvg.js"
   },
-  "files": ["dist", "bin", "examples", "psvg.ts"],
+  "files": [
+    "dist",
+    "bin",
+    "examples",
+    "psvg.ts"
+  ],
   "scripts": {
     "build": "rimraf dist && tsup psvg.ts --format esm,cjs,iife --dts --global-name PSVG",
     "prepublishOnly": "npm run build",
