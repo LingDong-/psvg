@@ -50,29 +50,28 @@ export function parsePSVG(str:string) : PSVGElement[] {
           return fromEntries(Array['from'](matchAll(/(^| )([^ ]+?)\="([^"]*)"/g)).map((x:string)=>x.slice(2)));
       };
 
-      function parseElement():void{
-        if (bodyStart != -1){
-          const open = str.slice(i+1,bodyStart-1);
-          const body = str.slice(bodyStart,bodyEnd);
-          // const close = str.slice(bodyStart,j+1);
-          const elt : PSVGElement = {
+      const parseNormalTag = (): void => {
+        const open = str.slice(i + 1, bodyStart - 1);
+        const body = str.slice(bodyStart, bodyEnd);
+        const elt: PSVGElement = {
             tagName: getTagName(open),
             attributes: getAttributes(open),
             children: parsePSVG(body),
             innerHTML: body,
-          };
-          elts.push(elt);
-        }else{
-          const open = str.slice(i+1,j);
-          const elt : PSVGElement = {
+        };
+        elts.push(elt);
+    };
+
+    const parseSelfClosingTag = (): void => {
+        const open = str.slice(i + 1, j);
+        const elt: PSVGElement = {
             tagName: getTagName(open),
             attributes: getAttributes(open),
             children: [],
-            innerHTML:"",
-          }
-          elts.push(elt);
-        }
-      }
+            innerHTML: '',
+        };
+        elts.push(elt);
+    };
 
       while (j <= str.length){
         if (str[j]=='\\'){
@@ -96,7 +95,7 @@ export function parsePSVG(str:string) : PSVGElement[] {
                 j++;
               }
               if (lvl == -1){
-                parseElement();
+                parseNormalTag();
                 i = j;
                 break;
               }
@@ -106,7 +105,7 @@ export function parsePSVG(str:string) : PSVGElement[] {
           }else if (str[j] == "/" && str[j+1]==">"){
             lvl--;
             if (lvl == -1){
-              parseElement();
+              parseSelfClosingTag();
               i = j;
               break;
             }

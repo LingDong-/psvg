@@ -31,28 +31,27 @@ function parsePSVG(str) {
         });
         return fromEntries(Array["from"](matchAll(/(^| )([^ ]+?)\="([^"]*)"/g)).map((x) => x.slice(2)));
       };
-      function parseElement() {
-        if (bodyStart != -1) {
-          const open = str.slice(i + 1, bodyStart - 1);
-          const body = str.slice(bodyStart, bodyEnd);
-          const elt = {
-            tagName: getTagName(open),
-            attributes: getAttributes(open),
-            children: parsePSVG(body),
-            innerHTML: body
-          };
-          elts.push(elt);
-        } else {
-          const open = str.slice(i + 1, j);
-          const elt = {
-            tagName: getTagName(open),
-            attributes: getAttributes(open),
-            children: [],
-            innerHTML: ""
-          };
-          elts.push(elt);
-        }
-      }
+      const parseNormalTag = () => {
+        const open = str.slice(i + 1, bodyStart - 1);
+        const body = str.slice(bodyStart, bodyEnd);
+        const elt = {
+          tagName: getTagName(open),
+          attributes: getAttributes(open),
+          children: parsePSVG(body),
+          innerHTML: body
+        };
+        elts.push(elt);
+      };
+      const parseSelfClosingTag = () => {
+        const open = str.slice(i + 1, j);
+        const elt = {
+          tagName: getTagName(open),
+          attributes: getAttributes(open),
+          children: [],
+          innerHTML: ""
+        };
+        elts.push(elt);
+      };
       while (j <= str.length) {
         if (str[j] == "\\") {
           j++;
@@ -74,7 +73,7 @@ function parsePSVG(str) {
                 j++;
               }
               if (lvl == -1) {
-                parseElement();
+                parseNormalTag();
                 i = j;
                 break;
               }
@@ -84,7 +83,7 @@ function parsePSVG(str) {
           } else if (str[j] == "/" && str[j + 1] == ">") {
             lvl--;
             if (lvl == -1) {
-              parseElement();
+              parseSelfClosingTag();
               i = j;
               break;
             }
