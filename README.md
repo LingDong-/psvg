@@ -161,7 +161,7 @@ import { compilePSVG } from "@lingdong/psvg"
 console.log(compilePSVG("<psvg>...</psvg>"))
 ```
 
-Or
+or
 
 ```js
 const { compilePSVG } = require("@lingdong/psvg")
@@ -174,3 +174,29 @@ Additionally, `parsePSVG()` `transpilePSVG()` and `evalPSVG()` which are individ
 In browsers, functions are exported under the global variable `PSVG`.
 
 **Check out [QUICKSTART.md](QUICKSTART.md) for a quick introduction to the PSVG language.**
+
+## Editor Support
+
+Syntax highlighting and auto-completion can be configured for editors by:
+
+### VS Code
+
+Add the following lines to your `settting.json`. [details](https://code.visualstudio.com/docs/languages/overview#_can-i-map-additional-file-extensions-to-a-language)
+
+```json
+  "files.associations": {
+    "*.psvg": "xml"
+  }
+```
+
+### GitHub
+
+To get highlighting for PSVG files in your repositories on GitHub, create `.gitattributes` file at the root of your repo with the following content. [details](https://github.com/github/linguist#using-gitattributes)
+
+```ini
+*.psvg linguist-language=SVG
+```
+
+### Other editors
+
+Since PSVG is compliant with XML and HTML specs, you can always alias your language id to XML or SVG via the corresponding config on your editor.
