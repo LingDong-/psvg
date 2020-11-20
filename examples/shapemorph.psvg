@@ -1,0 +1,54 @@
+<!-- shapemorph.psvg -->
+<!-- animation of simple shapes morphing between each other -->
+
+<psvg width="300" height="300">
+  
+  <stroke color="black"/>
+  <fill color="none"/>
+  
+  <!-- points for square -->
+  <var pts_sqr=""/>
+  <for i="0" true="{i<30}" step="1">
+    <asgn pts_sqr="{CAT(pts_sqr,WIDTH/2-50+(i/30)*100,HEIGHT/2-50)}"/>
+  </for>
+   <for i="0" true="{i<30}" step="1">
+    <asgn pts_sqr="{CAT(pts_sqr,WIDTH/2+50,HEIGHT/2-50+(i/30)*100)}"/>
+  </for>
+   <for i="0" true="{i<30}" step="1">
+    <asgn pts_sqr="{CAT(pts_sqr,WIDTH/2+50-(i/30)*100,HEIGHT/2+50)}"/>
+  </for>
+   <for i="0" true="{i<31}" step="1">
+    <asgn pts_sqr="{CAT(pts_sqr,WIDTH/2-50,HEIGHT/2+50-(i/30)*100)}"/>
+  </for>
+  
+  <!-- points for circle -->
+  <var pts_circ=""/>
+  <for i="0" true="{i<121}" step="1">
+    <var t="{i/120*PI*2-PI*3/4}"/>
+    <asgn pts_circ="{CAT(pts_circ,WIDTH/2+COS(t)*50,HEIGHT/2+SIN(t)*50)}"/>
+  </for>
+  
+  <!-- points for sqiggly circle-->
+  <var pts_star1=""/>
+  <for i="0" true="{i<121}" step="1">
+    <var t="{i/120*PI*2-PI*3/4}"/>
+    <var r="{SIN(i/120*PI*20)*25+50}"/>
+    <asgn pts_star1="{CAT(pts_star1,WIDTH/2+COS(t)*r,HEIGHT/2+SIN(t)*r)}"/>
+  </for>
+
+  <!-- points for another sqiggly circle -->
+  <var pts_star2=""/>
+  <for i="0" true="{i<121}" step="1">
+    <var t="{i/120*PI*2-PI*3/4}"/>
+    <var r="{SIN(i/120*PI*10)*20+50}"/>
+    <asgn pts_star2="{CAT(pts_star2,WIDTH/2+COS(t)*r,HEIGHT/2+SIN(t)*r)}"/>
+  </for>
+  
+  
+  <polyline>
+    <animate attributeName="points" 
+             values="{pts_sqr}; {pts_circ}; {pts_star1}; {pts_star2}; {pts_circ}; {pts_sqr}" 
+             dur="2s" 
+             repeatCount="indefinite"/>
+  </polyline>
+</psvg>
