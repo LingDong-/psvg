@@ -20,50 +20,59 @@ export function parsePSVG(str:string) : PSVGElement[] {
       let bodyEnd = -1;
       let quote = false;
       let lvl = 0;
-      function parseElement():void{
-        function getTagName(open:string){
-          return open.trim().split(" ")[0].trimEnd();
-        }
-        function getAttributes(open:string){
+
+      const getTagName = (open: string) => open.trim().split(" ")[0].trimEnd();
+
+      const getAttributes = (open: string) => {
           // oneliner doesn't work for safari:
           // return Object['fromEntries'](Array['from'](open.split(" ").slice(1).join(" ")['matchAll'](/(^| )([^ ]+?)\="([^"]*)"/g)).map((x:string)=>x.slice(2)));
-          
+
           // stupid polyfill for safari:
-          const thing1:any = open.split(" ").slice(1).join(" ");
-          let thing2:any = thing1['matchAll'];
-          if (!thing2){
-            thing2 = function(re:any){let ms = [];let m:any;while(1) {m =re.exec(thing1);if(m)ms.push(m);else break;}return ms;}
-          }else{
-            thing2 = function(re:any){return thing1.matchAll(re)}
-          }
-          if (!Object['fromEntries']){
-            Object['fromEntries']=function(a:any){var o:any={};a.map((x:any)=>o[x[0]]=x[1]);return o}
-          }
+          const attrsStr = open.split(" ").slice(1).join(" ");
+
+          const matchAll = attrsStr.matchAll || ((re: RegExp) => {
+            const ms: RegExpMatchArray[] = [];
+            while (1) {
+              const m = re.exec(attrsStr);
+              if (m) ms.push(m);
+              else break;
+            }
+            return ms;
+          });
+
+          const fromEntries = Object.fromEntries || ((a: any) => {
+            const o = {};
+            a.map(([key, value]) => o[key] = value);
+            return o;
+          });
+
           // @ts-ignore
-          return Object['fromEntries'](Array['from'](thing2(/(^| )([^ ]+?)\="([^"]*)"/g)).map((x:string)=>x.slice(2)));
-        }
-        if (bodyStart != -1){
-          const open = str.slice(i+1,bodyStart-1);
-          const body = str.slice(bodyStart,bodyEnd);
-          // const close = str.slice(bodyStart,j+1);
-          const elt : PSVGElement = {
+          return fromEntries(Array['from'](matchAll(/(^| )([^ ]+?)\="([^"]*)"/g)).map((x:string)=>x.slice(2)));
+      };
+
+      const parseNormalTag = (): void => {
+        const open = str.slice(i + 1, bodyStart - 1);
+        const body = str.slice(bodyStart, bodyEnd);
+        const elt: PSVGElement = {
             tagName: getTagName(open),
             attributes: getAttributes(open),
             children: parsePSVG(body),
             innerHTML: body,
-          };
-          elts.push(elt);
-        }else{
-          const open = str.slice(i+1,j);
-          const elt : PSVGElement = {
+        };
+        elts.push(elt);
+    };
+
+    const parseSelfClosingTag = (): void => {
+        const open = str.slice(i + 1, j);
+        const elt: PSVGElement = {
             tagName: getTagName(open),
             attributes: getAttributes(open),
             children: [],
-            innerHTML:"",
-          }
-          elts.push(elt);
-        }
-      }
+            innerHTML: '',
+        };
+        elts.push(elt);
+    };
+
       while (j <= str.length){
         if (str[j]=='\\'){
           j++;
@@ -86,7 +95,7 @@ export function parsePSVG(str:string) : PSVGElement[] {
                 j++;
               }
               if (lvl == -1){
-                parseElement();
+                parseNormalTag();
                 i = j;
                 break;
               }
@@ -96,7 +105,7 @@ export function parsePSVG(str:string) : PSVGElement[] {
           }else if (str[j] == "/" && str[j+1]==">"){
             lvl--;
             if (lvl == -1){
-              parseElement();
+              parseSelfClosingTag();
               i = j;
               break;
             }
@@ -448,4 +457,3 @@ if (typeof window !== 'undefined') {
     }
   })
 }
-

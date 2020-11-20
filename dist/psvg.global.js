@@ -27,69 +27,56 @@ var PSVG = (() => {
     function parsePSVG(str) {
       str = str.replace(/<!--[^\0]*?-->/gm, "");
       let i = 0;
-      let elts = [];
+      const elts = [];
       while (i <= str.length) {
         if (str[i] == "<") {
           let j = i + 1;
-          let j0 = -1;
-          let j1 = -1;
+          let bodyStart = -1;
+          let bodyEnd = -1;
           let quote = false;
           let lvl = 0;
-          function parseElement() {
-            function getTagName(open) {
-              return open.trim().split(" ")[0].trimEnd();
-            }
-            function getAttributes(open) {
-              let thing1 = open.split(" ").slice(1).join(" ");
-              let thing2 = thing1["matchAll"];
-              if (!thing2) {
-                thing2 = function(re) {
-                  let ms = [];
-                  let m;
-                  while (1) {
-                    m = re.exec(thing1);
-                    if (m)
-                      ms.push(m);
-                    else
-                      break;
-                  }
-                  return ms;
-                };
-              } else {
-                thing2 = function(re) {
-                  return thing1.matchAll(re);
-                };
+          const getTagName = (open) => open.trim().split(" ")[0].trimEnd();
+          const getAttributes = (open) => {
+            const attrsStr = open.split(" ").slice(1).join(" ");
+            const matchAll = attrsStr.matchAll || ((re) => {
+              const ms = [];
+              while (1) {
+                const m = re.exec(attrsStr);
+                if (m)
+                  ms.push(m);
+                else
+                  break;
               }
-              if (!Object["fromEntries"]) {
-                Object["fromEntries"] = function(a) {
-                  var o = {};
-                  a.map((x) => o[x[0]] = x[1]);
-                  return o;
-                };
-              }
-              return Object["fromEntries"](Array["from"](thing2(/(^| )([^ ]+?)\="([^"]*)"/g)).map((x) => x.slice(2)));
-            }
-            if (j0 != -1) {
-              let open = str.slice(i + 1, j0 - 1);
-              let body = str.slice(j0, j1);
-              let elt = {
-                tagName: getTagName(open),
-                attributes: getAttributes(open),
-                children: parsePSVG(body),
-                innerHTML: body
-              };
-              elts.push(elt);
-            } else {
-              let open = str.slice(i + 1, j);
-              let elt = {
-                tagName: getTagName(open),
-                attributes: getAttributes(open),
-                children: [],
-                innerHTML: ""
-              };
-              elts.push(elt);
-            }
-          }
+              return ms;
+            });
+            const fromEntries = Object.fromEntries || ((a) => {
+              const o = {};
+              a.map(([key, value]) => o[key] = value);
+              return o;
+            });
+            return fromEntries(Array["from"](matchAll(/(^| )([^ ]+?)\="([^"]*)"/g)).map((x) => x.slice(2)));
+          };
+          const parseNormalTag = () => {
+            const open = str.slice(i + 1, bodyStart - 1);
+            const body = str.slice(bodyStart, bodyEnd);
+            const elt = {
+              tagName: getTagName(open),
+              attributes: getAttributes(open),
+              children: parsePSVG(body),
+              innerHTML: body
+            };
+            elts.push(elt);
+          };
+          const parseSelfClosingTag = () => {
+            const open = str.slice(i + 1, j);
+            const elt = {
+              tagName: getTagName(open),
+              attributes: getAttributes(open),
+              children: [],
+              innerHTML: ""
+            };
+            elts.push(elt);
+          };
           while (j <= str.length) {
             if (str[j] == "\\") {
               j++;
@@ -98,20 +85,20 @@ var PSVG = (() => {
               quote = !quote;
             }
             if (!quote) {
-              if (str[j] == ">" && lvl == 0 && j0 == -1) {
-                j0 = j + 1;
+              if (str[j] == ">" && lvl == 0 && bodyStart == -1) {
+                bodyStart = j + 1;
               }
               if (str[j] == "<") {
                 if (str[j + 1] == "/") {
                   lvl--;
                   if (lvl == -1) {
-                    j1 = j;
+                    bodyEnd = j;
                   }
                   while (str[j] != ">") {
                     j++;
                   }
                   if (lvl == -1) {
-                    parseElement();
+                    parseNormalTag();
                     i = j;
                     break;
                   }
@@ -121,7 +108,7 @@ var PSVG = (() => {
               } else if (str[j] == "/" && str[j + 1] == ">") {
                 lvl--;
                 if (lvl == -1) {
-                  parseElement();
+                  parseSelfClosingTag();
                   i = j;
                   break;
                 }
