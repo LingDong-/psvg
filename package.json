@@ -21,7 +21,9 @@
     "prepublishOnly": "npm run build",
     "release": "npx bumpp --all --commit --tag && npm publish --access public && git push",
     "site": "node ./tools/make_site.js",
-    "examples": "node ./tools/compile_examples.js"
+    "examples": "node ./tools/compile_examples.js",
+    "lint": "eslint ./psvg.ts",
+    "format": "eslint --fix ./psvg.ts"
   },
   "repository": {
     "type": "git",
