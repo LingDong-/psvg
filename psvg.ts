@@ -134,7 +134,7 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
     if (hascm){
       x = x.replace(/, */g,',');
       const hasws = x['includes'](' ');
-      var y = __tolist(x);
+      const y = __tolist(x);
       if (!hasws){
         y['allCommas']=true;
       }
@@ -246,12 +246,12 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
       // return '__val(`'+x.replace(/(?<!\\)\{/g,"${") + "`)";
       return '__val(`'+x.replace(/([^\\]|^)\{/g,'$1${') + "`)";
     }
-    for (var i = 0; i < prgm.length; i++){
+    for (let i = 0; i < prgm.length; i++){
       if (prgm[i].tagName.toUpperCase() == "PSVG"){
         const w = transpileValue(prgm[i].attributes.width??"100");
         const h = transpileValue(prgm[i].attributes.height??"100");
         out += `__out+=\`<svg xmlns="http://www.w3.org/2000/svg" width="\${${w}}" height="\${${h}}" `;
-        for (var k in prgm[i].attributes){
+        for (const k in prgm[i].attributes){
           if (!(["width","height","background"]['includes'](k))){
             out += `${k}="\${${transpileValue(prgm[i].attributes[k])}}" `
           }
@@ -271,7 +271,7 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
         out += `};`;
       }else if (prgm[i].tagName.toUpperCase() == "IF"){
         if (Object.keys(prgm[i].attributes).length==0){
-          for (var j = 0; j < prgm[i].children.length; j++){
+          for (let j = 0; j < prgm[i].children.length; j++){
             if (j != 0){
               out += "else ";
             }
@@ -308,7 +308,7 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
         groups++;
       }else if (prgm[i].tagName.toUpperCase() == "STROKE"){
         out += "__out+=`<g ";
-        for (var k in prgm[i].attributes){
+        for (const k in prgm[i].attributes){
           out += `${{
             color:"stroke",
             value:"stroke",
@@ -326,7 +326,7 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
         groups++;
       }else if (prgm[i].tagName.toUpperCase() == "FILL"){
         out += "__out+=`<g ";
-        for (var k in prgm[i].attributes){
+        for (const k in prgm[i].attributes){
           out += `${{
             color:"fill",
             value:"fill",
@@ -338,7 +338,7 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
         groups++;
       }else if (prgm[i].tagName.toUpperCase() == "FONT"){
         out += "__out+=`<g ";
-        for (var k in prgm[i].attributes){
+        for (const k in prgm[i].attributes){
           out += `${{
             family:"font-family",
             font:"font-family",
@@ -357,15 +357,15 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
         out += `__out+=\`<g transform="scale(\${${transpileValue(prgm[i].attributes.x)}} \${${transpileValue(prgm[i].attributes.y)}})">\`;`
         groups++;
       }else if (prgm[i].tagName.toUpperCase() == "VAR"){
-        for (var k in prgm[i].attributes){
+        for (const k in prgm[i].attributes){
           out += `let ${k}=${transpileValue(prgm[i].attributes[k])};`
         }
       }else if (prgm[i].tagName.toUpperCase() == "ASGN" || prgm[i].tagName.toUpperCase() == "ASSIGN"){
-        for (var k in prgm[i].attributes){
+        for (const k in prgm[i].attributes){
           out += `${k}=${transpileValue(prgm[i].attributes[k])};`
         }
       }else if (prgm[i].tagName.toUpperCase() == "RETURN"){
-        for (var j = 0; j < groups; j++){
+        for (let j = 0; j < groups; j++){
           out += "__out+='</g>';"
         }
         if (prgm[i].attributes.value){
@@ -375,7 +375,7 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
         }
       }else if (prgm[i].tagName.toUpperCase() == "FOR"){
         let name : string;
-        for (var k in prgm[i].attributes){
+        for (const k in prgm[i].attributes){
           
           if (!(["true","false","step"]['includes'](k))){
             name = k;
@@ -406,7 +406,7 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
       }else if (prgm[i].tagName in funcs){
         out += prgm[i].tagName+"(";
         const args = funcs[prgm[i].tagName].args;
-        for (var j = 0; j < args.length; j++){
+        for (let j = 0; j < args.length; j++){
           const v = prgm[i].attributes[args[j]];
           out += v===undefined?"undefined":transpileValue(v);
           out += ",";
@@ -414,7 +414,7 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
         out += ");"
       }else{
         out += "__out+=`<"+prgm[i].tagName+" ";
-        for (var k in prgm[i].attributes){
+        for (const k in prgm[i].attributes){
           out += `${k}="\${${transpileValue(prgm[i].attributes[k])}}" `;
         }
         const needInner = ["TEXT","STYLE"]['includes'](prgm[i].tagName.toUpperCase());
@@ -430,7 +430,7 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
         }
       }
     }
-    for (var i = 0; i < groups; i++){
+    for (let i = 0; i < groups; i++){
       out += "__out+='</g>';"
     }
     return out;
