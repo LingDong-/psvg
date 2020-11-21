@@ -121,7 +121,7 @@ export function parsePSVG(str:string) : PSVGElement[] {
 
 
 export function transpilePSVG(prgm:PSVGElement[]):string{
-  let funcs : Record<string,PSVGFunc> = {};
+  const funcs : Record<string,PSVGFunc> = {};
   function __val(x:string):any{
     if (new RegExp(/^[+-]?(\d+([.]\d*)?([eE][+-]?\d+)?|[.]\d+([eE][+-]?\d+)?)$/g).test(x)){
       return parseFloat(x);
@@ -130,10 +130,10 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
       return x==`true`;
     }
     
-    let hascm = x['includes'](',');
+    const hascm = x['includes'](',');
     if (hascm){
       x = x.replace(/, */g,',');
-      let hasws = x['includes'](' ');
+      const hasws = x['includes'](' ');
       var y = __tolist(x);
       if (!hasws){
         y['allCommas']=true;
@@ -153,7 +153,7 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
     return __makelist(s.replace(/,/g,' ').split(" ").filter(x=>x.length).map(__val));
   }
 
-  let builtins : Record<string,string> = {
+  const builtins : Record<string,string> = {
     NTH:(function(x:any[]|string,i:number):any{
       if (typeof x == 'string'){
         x = __tolist(x);
@@ -176,7 +176,7 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
       if (typeof x == 'string'){
         x = __tolist(x);
       }
-      let z = x.slice();
+      const z = x.slice();
       z[i]=y;
       return __makelist(z);
     }).toString(),
@@ -248,8 +248,8 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
     }
     for (var i = 0; i < prgm.length; i++){
       if (prgm[i].tagName.toUpperCase() == "PSVG"){
-        let w = transpileValue(prgm[i].attributes.width??"100");
-        let h = transpileValue(prgm[i].attributes.height??"100");
+        const w = transpileValue(prgm[i].attributes.width??"100");
+        const h = transpileValue(prgm[i].attributes.height??"100");
         out += `__out+=\`<svg xmlns="http://www.w3.org/2000/svg" width="\${${w}}" height="\${${h}}" `;
         for (var k in prgm[i].attributes){
           if (!(["width","height","background"]['includes'](k))){
@@ -264,7 +264,7 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
         out += transpilePSVGList(prgm[i].children);
         out += `__out+='</svg>';`;
       }else if (prgm[i].tagName.toUpperCase()['startsWith']("DEF-")){
-        let name = prgm[i].tagName.split("-").slice(1).join("-");
+        const name = prgm[i].tagName.split("-").slice(1).join("-");
         funcs[name]={name,args:Object.keys(prgm[i].attributes)};
         out += `function ${name}(${Object['entries'](prgm[i].attributes).map((x:string[])=>x[0]+"="+transpileValue(x[1]))}){`;
         out += transpilePSVGList(prgm[i].children);
@@ -382,7 +382,7 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
             break;
           }
         }
-        let step : string = prgm[i].attributes['step']??"1";
+        const step : string = prgm[i].attributes['step']??"1";
 
         out += `for (let ${name}=${transpileValue(prgm[i].attributes[name])};`;
         if (prgm[i].attributes.true){
@@ -405,9 +405,9 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
 
       }else if (prgm[i].tagName in funcs){
         out += prgm[i].tagName+"(";
-        let args = funcs[prgm[i].tagName].args;
+        const args = funcs[prgm[i].tagName].args;
         for (var j = 0; j < args.length; j++){
-          let v = prgm[i].attributes[args[j]];
+          const v = prgm[i].attributes[args[j]];
           out += v===undefined?"undefined":transpileValue(v);
           out += ",";
         }
@@ -417,7 +417,7 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
         for (var k in prgm[i].attributes){
           out += `${k}="\${${transpileValue(prgm[i].attributes[k])}}" `;
         }
-        let needInner = ["TEXT","STYLE"]['includes'](prgm[i].tagName.toUpperCase());
+        const needInner = ["TEXT","STYLE"]['includes'](prgm[i].tagName.toUpperCase());
         if (prgm[i].children.length || needInner){
           out += ">`;";
           out += transpilePSVGList(prgm[i].children);
@@ -442,9 +442,9 @@ export function evalPSVG(js:string):string {
 }
 
 export function compilePSVG(psvg:string):string {
-  let prgm = parsePSVG(psvg);
+  const prgm = parsePSVG(psvg);
   // console.dir(prgm,{depth:null});
-  let js = transpilePSVG(prgm);
+  const js = transpilePSVG(prgm);
   // console.log(js);
   return evalPSVG(js);
 }
