@@ -33,6 +33,7 @@
   "homepage": "https://github.com/LingDong-/psvg#readme",
   "devDependencies": {
     "@types/node": "^14.14.8",
+    "eslint": "^7.14.0",
     "rimraf": "^3.0.2",
     "tsup": "^3.8.0",
     "typescript": "^4.0.5"
