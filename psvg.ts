@@ -11,7 +11,7 @@ export interface PSVGFunc {
 
 export function parsePSVG(str:string) : PSVGElement[] {
   str = str.replace(/<!--[^\0]*?-->/gm,"");
-  let i : number = 0;
+  let i = 0;
   const elts : PSVGElement[]=[];
   while (i <= str.length){
     if (str[i] == "<"){
@@ -230,7 +230,7 @@ export function transpilePSVG(prgm:PSVGElement[]):string{
   
   function transpilePSVGList(prgm:PSVGElement[]):string{
 
-    let out : string = "";
+    let out = "";
     let groups = 0;
 
     function transpileValue(x:string):string{
