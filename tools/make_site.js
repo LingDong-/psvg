@@ -1,17 +1,21 @@
-const fs = require('fs')
-const path = require('path')
-const examplePath = path.resolve(__dirname, '../examples')
-const outPath = path.resolve(__dirname, '../site/index.html')
+const fs = require('fs');
+const path = require('path');
+const examplePath = path.resolve(__dirname, '../examples');
+const outPath = path.resolve(__dirname, '../site/index.html');
 
-var exampleNames = fs.readdirSync(examplePath).filter((x) => x.endsWith('.psvg'))
-exampleNames.sort()
-var exampleTexts = exampleNames.map((x) => fs.readFileSync(path.join(examplePath, x)).toString())
-var examples = {}
-exampleNames.map((x, i) => (examples[x] = exampleTexts[i]))
+var exampleNames = fs
+  .readdirSync(examplePath)
+  .filter((x) => x.endsWith('.psvg'));
+exampleNames.sort();
+var exampleTexts = exampleNames.map((x) =>
+  fs.readFileSync(path.join(examplePath, x)).toString()
+);
+var examples = {};
+exampleNames.map((x, i) => (examples[x] = exampleTexts[i]));
 
-let themeName = 'xq-light'
+let themeName = 'xq-light';
 
-const html = String.raw
+const html = String.raw;
 
 let siteHTML = html`
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.min.css">
@@ -119,7 +123,9 @@ let siteHTML = html`
   <hr style="position: absolute;left:0px;top:40px;width:100%"/>
 </body>
 <script>
-  ${fs.readFileSync(path.resolve(__dirname, '../dist/psvg.global.js')).toString()}
+  ${fs
+    .readFileSync(path.resolve(__dirname, '../dist/psvg.global.js'))
+    .toString()}
 </script>
 <script>
   var themeName = "${themeName}";
@@ -127,38 +133,38 @@ let siteHTML = html`
   ${main.toString()}
   main();
 </script>
-`
+`;
 
 function main() {
   function debounce(func, wait) {
-    var timeout
+    var timeout;
     return function () {
       var context = this,
-        args = arguments
+        args = arguments;
       var later = function () {
-        timeout = null
-        func.apply(context, args)
-      }
-      clearTimeout(timeout)
-      timeout = setTimeout(later, wait)
-    }
+        timeout = null;
+        func.apply(context, args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
   }
 
-  const select = document.getElementById('select')
-  const output = document.getElementById('output')
-  const run = document.getElementById('compile')
-  const auto = document.getElementById('auto-compile')
+  const select = document.getElementById('select');
+  const output = document.getElementById('output');
+  const run = document.getElementById('compile');
+  const auto = document.getElementById('auto-compile');
 
   const setExample = (name) => {
-    select.value = name
-    CM.setValue(examples[name])
-    compile()
-  }
+    select.value = name;
+    CM.setValue(examples[name]);
+    compile();
+  };
 
   const compile = () => {
-    output.innerHTML = PSVG.compilePSVG(CM.getValue())
-  }
-  const debouncedCompile = debounce(compile, 800)
+    output.innerHTML = PSVG.compilePSVG(CM.getValue());
+  };
+  const debouncedCompile = debounce(compile, 800);
 
   var CM = CodeMirror(document.getElementById('input'), {
     lineNumbers: true,
@@ -171,17 +177,17 @@ function main() {
       'Ctrl-Enter': compile,
       'Cmd-Enter': compile,
     },
-  })
+  });
 
   CM.on('change', (_, e) => {
     if (auto.checked && e.origin !== 'setValue') {
-      debouncedCompile()
+      debouncedCompile();
     }
-  })
+  });
 
-  setExample('koch.psvg')
-  select.onchange = () => setExample(select.value)
-  run.onclick = compile
+  setExample('koch.psvg');
+  select.onchange = () => setExample(select.value);
+  run.onclick = compile;
 }
 
-fs.writeFileSync(outPath, siteHTML)
+fs.writeFileSync(outPath, siteHTML);
