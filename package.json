@@ -21,7 +21,9 @@
     "prepublishOnly": "npm run build",
     "release": "npx bumpp --all --commit --tag && npm publish --access public && git push",
     "site": "node ./tools/make_site.js",
-    "examples": "node ./tools/compile_examples.js"
+    "examples": "node ./tools/compile_examples.js",
+    "format:check": "prettier --check './**/*.{js,ts}'",
+    "format:write": "prettier --write './**/*.{js,ts}'"
   },
   "repository": {
     "type": "git",
