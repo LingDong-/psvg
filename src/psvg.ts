@@ -1,9 +1,5 @@
-export interface PSVGElement {
-  tagName: string;
-  children: PSVGElement[];
-  attributes: Record<string, string>;
-  innerHTML: string;
-}
+import { PSVGElement } from './element';
+
 export interface PSVGFunc {
   name: string;
   args: string[];
