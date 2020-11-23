@@ -17,7 +17,7 @@
     "psvg.ts"
   ],
   "scripts": {
-    "build": "rimraf dist && tsup psvg.ts --format esm,cjs,iife --dts --global-name PSVG",
+    "build": "rimraf dist && tsup src/psvg.ts --format esm,cjs,iife --dts --global-name PSVG",
     "prepublishOnly": "npm run build",
     "release": "npx bumpp --all --commit --tag && npm publish --access public && git push",
     "site": "node ./tools/make_site.js",
