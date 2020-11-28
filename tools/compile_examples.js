@@ -20,3 +20,18 @@ for (const example of examples) {
 
   fs.writeFileSync(filepath.replace(/\.psvg$/, '.svg'), svg, 'utf-8');
 }
+
+
+var md="# Gallery\nPSVG `examples/` showcase! You can also fiddle with these examples on the online [Playground](https://psvg.netlify.app/). \n\n";
+for (const example of examples) {
+  if (example.includes("helloworld")){
+    continue; // redundent with textanim and not as cool
+  }
+  const svg = example.replace(/\.psvg$/,'.svg');
+  const filepath = path.join(examplePath, example);
+  const com = fs.readFileSync(filepath).toString().split("-->").map(x=>x.trim()).filter(x=>x.startsWith('<!--')).join(' -->\n')+' -->\n';
+  md+=`\n## [${example}](${example}) → [${svg}](${svg})\n\n`;
+  md+=`![${svg}](${svg})\n\n`;
+  md+="```xml\n"+com+"```\n\n";
+}
+fs.writeFileSync(path.join(examplePath,"README.md"),md,'utf-8');
