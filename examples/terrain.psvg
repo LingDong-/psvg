@@ -49,11 +49,14 @@
   
   <!-- project to 2d coordinates -->
     
-  <def-projection pts="" th="0">
+  <def-projection pts="" th="0" ph="-0.4">
     <var qts=""/>
     <for i="0" true="{i<N*N}" step="1">
       <var x="{NTH(pts,i*3)}" y="{NTH(pts,i*3+1)}" z="{NTH(pts,i*3+2)}"/>
-      <asgn x="{x*COS(th)-y*SIN(th)}" y="{x*SIN(th)+y*COS(th)}"/>
+      <var x1="{x*COS(th)-y*SIN(th)}"  y1="{x*SIN(th)+y*COS(th)}"/>
+      <var y2="{y1*COS(ph)-z*SIN(ph)}" z2="{y1*SIN(ph)+z*COS(ph)}"/>
+      
+      <asgn x="{x1}" y="{y2}" z="{z2}"/>
       <asgn y="{y+N*3}"/>
       <var px="{FOCAL*x/y+WIDTH/2}"/>
       <var py="{FOCAL*z/y+HEIGHT/2}"/>
