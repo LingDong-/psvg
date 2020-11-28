@@ -1,0 +1,115 @@
+<!-- terrain.psvg                     -->
+<!-- animated wireframe terrain in 3D -->
+
+<psvg width="500" height="400">
+
+  <fill color="none"/>
+  <stroke color="black" weight="1.2" join="round"/>
+  
+  <var N="{5*2}"
+       T="24"
+       FOCAL="800"
+  />
+  
+  <!-- generate a simple value noise with just 2 octaves        -->
+  <!-- alternatively, use perlin noise from example/pulsar.psvg -->
+  
+  <var grid=""/>
+  
+  <for i="0" true="{i<N*N/4}" step="1">
+    <asgn grid="{CAT(grid,RANDOM()*2-1)}"/>
+  </for>
+  
+  <!-- add noise details -->
+  
+  <for i="{COUNT(grid)-1}" true="{i>=0}" step="-1">
+    <var z="{(NTH(grid,i)+NTH(grid,(i+1)%(N/2)))/2}"/>
+    <asgn grid="{CAT(TAKE(grid,i+1),z,DROP(grid,i+1))}"/>
+  </for>
+ 
+  <for i="{N/2-1}" true="{i>=0}" step="-1">
+    <var a="{TAKE(DROP(grid,i*N),i*N+N)}"/>
+    <var b="{TAKE(DROP(grid,((i+1)%(N/2))*N),((i+1)%(N/2))*N+N)}"/>
+    <var zs=""/>
+    <for j="0" true="{j<COUNT(a)}" step="1">
+      <asgn zs="{CAT(zs,(NTH(a,j)+NTH(b,j))/2+(RANDOM()*2-1)*0.2)}"/>
+    </for>
+    <asgn grid="{CAT(TAKE(grid,i*N+N),zs,DROP(grid,i*N+N))}"/>
+  </for>
+  
+  
+  <!-- generate points from the noise -->
+  
+  <var pts=""/>
+  <for i="0" true="{i<N}" step="1">
+  	<for j="0" true="{j<N}" step="1">
+      <asgn pts="{CAT(pts,j-N/2,i-N/2,1.5*NTH(grid,i*N+j))}"/>
+  	</for>
+  </for>
+  
+  <!-- project to 2d coordinates -->
+    
+  <def-projection pts="" th="0">
+    <var qts=""/>
+    <for i="0" true="{i<N*N}" step="1">
+      <var x="{NTH(pts,i*3)}" y="{NTH(pts,i*3+1)}" z="{NTH(pts,i*3+2)}"/>
+      <asgn x="{x*COS(th)-y*SIN(th)}" y="{x*SIN(th)+y*COS(th)}"/>
+      <asgn y="{y+N*3}"/>
+      <var px="{FOCAL*x/y+WIDTH/2}"/>
+      <var py="{FOCAL*z/y+HEIGHT/2}"/>
+      <asgn qts="{CAT(qts,px,py)}"/>
+    </for>
+    <return value="{qts}"/>
+  </def-projection>
+
+
+  <!-- build animation -->
+  
+  <var qts=""/>
+  
+  <for t="0" true="{t<T}" step="1">
+    <asgn qts="{CAT(qts,projection(pts,2*PI*t/(T-1)))}"/>
+  </for>
+  
+  
+  <for i="0" true="{i<N}" step="1">
+    <var row=""/>
+    <for t="0" true="{t<T}" step="1">
+      <asgn row="{CAT(row,TAKE(DROP(qts,t*(N*N*2)+i*N*2),N*2),';')}"/>
+    </for>
+    
+    <polyline>
+      <animate 
+        attributeName="points" 
+        values="{row}" 
+        dur="5s" 
+        repeatCount="indefinite"/>
+
+    </polyline>
+  </for>
+  
+  
+  <for j="0" true="{j<N}" step="1">
+    <var row=""/>
+    <for t="0" true="{t<T}" step="1">
+      <for i="0" true="{i<N}" step="1">
+        <asgn row="{CAT(row,NTH(qts,t*N*N*2+i*N*2+j*2))}"/>
+        <asgn row="{CAT(row,NTH(qts,t*N*N*2+i*N*2+j*2+1))}"/>
+      </for>
+      <asgn row="{CAT(row,';')}"/>
+    </for>
+    
+   
+    <polyline>
+      <animate 
+        attributeName="points" 
+        values="{row}" 
+        dur="5s" 
+        repeatCount="indefinite"/>
+
+    </polyline>
+  </for>
+  
+  
+</psvg>
+

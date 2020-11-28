@@ -43,7 +43,7 @@ export function parsePSVG(str: string): PSVGElement[] {
 
         // @ts-ignore
         // prettier-ignore
-        return fromEntries(Array['from'](matchAll(/(^| )([^ ]+?)\="([^"]*)"/g)).map((x: string) => x.slice(2)));
+        return fromEntries(Array['from'](matchAll(/(^| )([^ ]+?)\ *= *"([^"]*)"/g)).map((x: string) => x.slice(2)));
       };
 
       const parseNormalTag = (): void => {
