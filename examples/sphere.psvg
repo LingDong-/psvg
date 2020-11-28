@@ -1,0 +1,98 @@
+<!-- sphere.psvg               -->
+<!-- 3D animated shaded sphere -->
+
+<psvg width="400" height="400" background="black">
+  <var N="12"
+       M="12"
+       R="1"
+       T="4"
+       FOCAL="400"
+  />
+  
+  <stroke color="black"/>
+    
+  <!-- generate UV sphere vertices --> 
+  <var pts=""/>
+  <for i="0" true="{i<N}" step="1">
+  	<for j="0" true="{j<M}" step="1">
+      <var th="{PI*2*j/M}"
+           ph="{PI*(i/(N-1)-0.5)}"
+           x="{R*COS(th)*COS(ph)}"
+      	   y="{R*SIN(ph)}"
+           z="{R*SIN(th)*COS(ph)}"
+      />
+      <asgn pts="{CAT(pts,x,y,z)}"/>
+    </for>
+  </for>
+    
+  <!-- project 3D points to 2D coordinates--> 
+  <def-projection pts="" th="0" ph="{PI/4}">
+    <var qts=""/>
+    <for i="0" true="{i<N*N}" step="1">
+      <var x="{NTH(pts,i*3)}" y="{NTH(pts,i*3+1)}" z="{NTH(pts,i*3+2)}"/>
+      <var x1="{x*COS(th)-z*SIN(th)}" z1="{x*SIN(th)+z*COS(th)}"/>
+      <var y2="{y*COS(ph)-z1*SIN(ph)}" z2="{y*SIN(ph)+z1*COS(ph)}"/>
+      
+      <asgn x="{x1}" y="{y2}" z="{z2}"/>
+      <asgn z="{z+R*3}"/>
+      <var px="{FOCAL*x/z+WIDTH/2}"/>
+      <var py="{FOCAL*y/z+HEIGHT/2}"/>
+     
+      <asgn qts="{CAT(qts,px,py,(z-R*2)/(R*2))}"/>
+    </for>
+    <return value="{qts}"/>
+  </def-projection>
+  
+  <!-- build the animation --> 
+  
+  <var qts=""/>
+  <for t="0" true="{t<T}" step="1">
+    <asgn qts="{CAT(qts,projection(pts,(2*PI/M)*t/(T-1)))}"/>
+  </for>
+  
+
+  <!-- draw each quad --> 
+  
+  <for i="0" true="{i<N-1}" step="1">
+  	<for j="0" true="{j<M}" step="1">
+    <polygon id="{i*N*3+j*3}" style="mix-blend-mode:lighten">
+      <var row=""/>
+      <var ord=""/>
+      
+      <for t="0" true="{t<T}" step="1">
+      	<var j1="{(j+1)%M}"/>
+        <asgn row="{CAT(row,NTH(qts,t*N*M*3+i*M*3+j*3))}"/>
+        <asgn row="{CAT(row,NTH(qts,t*N*M*3+i*M*3+j*3+1))}"/>
+        <asgn row="{CAT(row,NTH(qts,t*N*M*3+i*M*3+j1*3))}"/>
+        <asgn row="{CAT(row,NTH(qts,t*N*M*3+i*M*3+j1*3+1))}"/>
+        <asgn row="{CAT(row,NTH(qts,t*N*M*3+(i+1)*M*3+j1*3))}"/>
+        <asgn row="{CAT(row,NTH(qts,t*N*M*3+(i+1)*M*3+j1*3+1))}"/>
+        <asgn row="{CAT(row,NTH(qts,t*N*M*3+(i+1)*M*3+j*3))}"/>
+        <asgn row="{CAT(row,NTH(qts,t*N*M*3+(i+1)*M*3+j*3+1))}"/>
+        <asgn row="{CAT(row,';')}"/>
+
+        <var gray="{FLOOR(MAX(0,255-500*NTH(qts,t*N*M*3+i*M*3+j*3+2)))}"/>
+        <var col="rgb({gray}&#44;{gray}&#44;{gray});"/>
+        <asgn ord="{CAT(ord,col)}"/>
+      </for>
+      
+    
+      <animate 
+        attributeName="points" 
+        values="{row}" 
+        dur="1s" 
+        repeatCount="indefinite"/>
+      <animate 
+        attributeName="fill" 
+        values="{ord}" 
+        dur="1s" 
+        repeatCount="indefinite"/>
+      
+      </polygon>
+      
+    </for>
+  </for>
+
+  
+</psvg>
+
