@@ -1,0 +1,51 @@
+<!-- schotter.psvg                        -->
+<!-- recreation of the Georg Nees classic -->
+<!-- with silly animations                -->
+
+<psvg width="480" height="800" background="floralwhite">
+  <stroke color="black" cap="round" weight="1.2"/>
+  <fill color="none"/>
+  
+  <var ROWS="22"
+       COLS="12"
+       W="30"
+       PAD="60"/>
+  
+  <translate x="{PAD}" y="{PAD}"/>
+             
+  <for i="0" true="{i<ROWS}" step="1">
+    <for j="0" true="{j<COLS}" step="1">
+      <translate x="{j*W+W/2}" y="{i*W+W/2}"/>
+      <g>
+        <g>
+          <rect x="{-W/2}" y="{-W/2}" width="{W}" height="{W}" rx="0.5"/>
+      	  <animateTransform
+            attributeName="transform"
+            type="rotate"                
+            from="0"
+            to="{(RANDOM()-0.5)*(i+1)*(i+1)*1}"
+            dur="0.5s"
+            begin="{(i-1)*0.1}s"
+            fill="freeze"
+          />
+        </g>
+        <animateTransform
+      	  attributeName="transform"
+          type="translate"                
+          from="0 0"
+          to="{(RANDOM()-0.5)*i*i*0.1} {(RANDOM()-0.5)*i*i*0.1}"
+          dur="0.5s"
+          begin="{(i-1)*0.1}s"
+          fill="freeze"
+        />
+      </g>
+    </for>      
+  </for>
+
+  <font family="sans-serif" weight="lighter" size="6" anchor="end"/>
+  <text x="{WIDTH-PAD*2}" y="700" stroke="none" fill="black" opacity="0">
+    COMPUTERGRAPFIK MIT SIMENS-SYSTEM 4004
+    <animate attributeName="opacity" from="0" to="1" begin="2s" dur="0.4s" fill="freeze"/>
+  </text>
+  
+</psvg>
