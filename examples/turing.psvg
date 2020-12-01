@@ -1,0 +1,166 @@
+<!-- turing.psvg                                 -->
+<!-- animated universal turing machine simulator -->
+
+<psvg width="402" height="22" viewBox="-1 -1 402 22">
+
+  <!-- encoding of turing machine -->
+  <!-- mach="current_state head_position tape[0] tape[1] tape[2] ..." -->
+  <!-- transition="current_state target_state read_symbol write_symbol shift" -->
+  <!-- D="transition0 transition1 transition2 ..." -->
+
+  <!-- one step of simulation -->
+  
+  <def-step mach="" D="">
+    <var M="{TAKE(mach,2)}"/>
+    <var T="{DROP(mach,2)}"/>
+    <var state="{NTH(M,0)}"/>
+    <var head="{NTH(M,1)}"/>
+
+    <for i="0" true="{i<COUNT(D)/5}" step="1">
+      <var d_q_curr="{NTH(D,i*5)}"
+           d_q_targ="{NTH(D,i*5+1)}"
+           d_sym_r="{NTH(D,i*5+2)}"
+           d_sym_w="{NTH(D,i*5+3)}"
+           d_shift="{NTH(D,i*5+4)}"/>
+
+      <if true="{state==d_q_curr}">
+
+        <if true="{NTH(T,head)==d_sym_r}">
+
+          <asgn T="{UPDATE(T,head,d_sym_w)}"/>
+          <asgn M="{UPDATE(M,0,d_q_targ)}"/>
+          <if>
+            <cond true="{d_shift=='L'}">
+              <asgn M="{UPDATE(M,1,head-1)}"/>
+            </cond>
+            <cond true="{d_shift=='R'}">
+              <asgn M="{UPDATE(M,1,head+1)}"/>
+            </cond>
+          </if>
+          
+          <return value="{M} {T}"/>
+        </if>
+      </if>
+    </for>
+
+  </def-step>
+  
+  <!-- run a turing machine -->
+  <!-- q0: start state -->
+  <!-- q1: halt  state -->
+  <!-- tmin: minimum tape coordinate -->
+  <!-- tmin: maximum tape coordinate -->
+  
+  <def-turing D="" q0="" q1="" tmin="" tmax="">
+    <var hist_state=""
+         hist_head=""
+         hist_tape=""
+         n_hist="0"/>
+    <var T="{FILL(0,tmax-tmin)}"/>
+    <var mach="{q0} {-tmin} {T}"/>
+    
+    <while false="{NTH(mach,0)==q1}">
+      <asgn mach="{step(mach,D)}"/>
+      
+      <asgn hist_state="{CAT(hist_state,NTH(mach,0))}"/>
+      <asgn hist_head="{CAT(hist_head,NTH(mach,1))}"/>
+      <asgn hist_tape="{CAT(hist_tape,DROP(mach,2))}"/>
+      <asgn n_hist="{n_hist+1}"/>
+    </while>
+    
+    
+    <return value="{n_hist} {hist_state} {hist_head} {hist_tape}"/>
+  </def-turing>
+  
+
+  <!-- draw animation -->
+
+  <def-drawanim hist="">
+    
+    <var n_hist="{NTH(hist,0)}"/>
+    <var hist_state="{TAKE(DROP(hist,1),n_hist)}"
+         hist_head="{TAKE(DROP(hist,1+n_hist),n_hist)}"
+         hist_tape="{DROP(hist,1+n_hist*2)}"/>
+
+    <var len_tape="{COUNT(hist_tape)/n_hist}"/>
+    
+    <var anim_head=""/>
+    <for i="0" true="{i<n_hist}" step="1">
+      <var v="{NTH(hist_head,i)*20}"/>
+      <asgn anim_head="{CAT(anim_head,v,';',v,';')}"/>
+    </for>
+    
+    <var anim_state=""/>
+    <for i="0" true="{i<n_hist}" step="1">
+      <var v="{NTH(hist_state,i)}"/>
+      <asgn anim_state="{CAT(anim_state,v,';',v,';')}"/>
+    </for>
+    
+    
+    <var anim_tape=""/>
+    <for i="0" true="{i<len_tape}" step="1">
+      <for j="0" true="{j<n_hist}" step="1">
+        <var v="{3-2.9*NTH(hist_tape,j*len_tape+i)}"/>
+        <asgn anim_tape="{CAT(anim_tape,v,';')}"/>
+      </for>
+    </for>
+    
+    <var dur="{n_hist/3}"/>
+    
+    <fill color="none"/>
+    <stroke color="black"/>
+    
+    <for i="0" true="{i<len_tape}" step="1">
+      <rect x="{i*20}" y="0" width="20" height="20"/>
+    </for>
+    
+    <for i="0" true="{i<len_tape}" step="1">
+      <ellipse cx="{i*20+10}" cy="10" rx="3" ry="5">
+        <animate attributeName="rx"
+                 dur="{dur}s"
+                 begin="0s"
+                 values="{TAKE(DROP(anim_tape,n_hist*i*2),n_hist*2)}"
+                 fill="freeze"
+                 repeatCount="indefinite"
+        />
+      </ellipse>
+    </for>
+    
+    <stroke weight="4"/>
+    <rect x="0" y="0" width="20" height="20" fill-opacity="0.3">
+      <animate attributeName="x"
+               dur="{dur}s"
+               begin="0s"
+               values="{anim_head}"
+               fill="freeze"
+               repeatCount="indefinite"
+      />
+      <animate attributeName="fill"
+               dur="{dur}s"
+               begin="0s"
+               values="{anim_state}"
+               fill="freeze"
+               repeatCount="indefinite"
+      />
+    </rect>
+    
+  </def-drawanim>
+
+
+  <!-- 3 state busy beaver -->
+
+  <def-beaver3>
+    <var D="aqua blue 0 1 R   aqua coral 1 1 L   blue aqua 0 1 L   blue blue 1 1 R   coral blue 0 1 L   coral hotpink 1 1 S"/>
+    <drawanim hist="{turing(D,'aqua','hotpink',-10,10)}"/>
+  </def-beaver3>
+
+  <!-- 4 state busy beaver -->
+  
+  <def-beaver4>
+    <var D="aqua blue 0 1 R   aqua blue 1 1 L   blue aqua 0 1 L   blue coral 1 0 L   coral hotpink 0 1 R   coral darkred 1 1 L   darkred darkred 0 1 R   darkred aqua 1 0 R"/>
+    <drawanim hist="{turing(D,'aqua','hotpink',-10,10)}"/>
+  </def-beaver4>
+  
+  <beaver4/>
+  
+</psvg>

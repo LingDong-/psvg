@@ -133,3 +133,21 @@ PSVG `examples/` showcase! You can also fiddle with these examples on the online
 <!-- A port of https://processing.org/examples/tree.html -->
 ```
 
+
+## [turing.psvg](turing.psvg) → [turing.svg](turing.svg)
+
+![turing.svg](turing.svg)
+
+```xml
+<!-- turing.psvg -->
+<!-- animated universal turing machine simulator -->
+<!-- mach="current_state head_position tape[0] tape[1] tape[2] ..." -->
+<!-- transition="current_state target_state read_symbol write_symbol shift" -->
+<!-- D="transition0 transition1 transition2 ..." -->
+<!-- one step of simulation -->
+<!-- q0: start state -->
+<!-- q1: halt  state -->
+<!-- tmin: minimum tape coordinate -->
+<!-- tmin: maximum tape coordinate -->
+```
+
