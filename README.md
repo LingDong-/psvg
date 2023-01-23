@@ -128,7 +128,7 @@ psvg input.svg > output.svg
 For example, to compile the hilbert curve example in this repo:
 
 ```
-psvg examples/hilbert.psvg > examples/hibert.svg
+psvg examples/hilbert.psvg > examples/hilbert.svg
 ```
 
 or try it without installing via [`npx`](https://www.npmjs.com/package/npx) (comes together with npm)
@@ -181,7 +181,7 @@ Syntax highlighting and auto-completion can be configured for editors by:
 
 ### VS Code
 
-Add the following lines to your `settting.json`. [details](https://code.visualstudio.com/docs/languages/overview#_can-i-map-additional-file-extensions-to-a-language)
+Add the following lines to your `settings.json`. [details](https://code.visualstudio.com/docs/languages/overview#_can-i-map-additional-file-extensions-to-a-language)
 
 ```json
   "files.associations": {
