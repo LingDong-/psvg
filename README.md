@@ -8,7 +8,7 @@ PSVG is an extension of the SVG (Scalable Vector Graphics) format that introduce
 
 PSVG is compliant with XML and HTML specs, so it can be easily embedded in a webpage or edited with an XML editor.
 
-This repo contains a [PSVG→SVG complier](psvg.ts) that transforms PSVG files to just regular SVG's. It can also automatically render all PSVG's on an HTML page when included as a `<script>`.
+This repo contains a [PSVG→SVG complier](src/psvg.ts) that transforms PSVG files to just regular SVG's. It can also automatically render all PSVG's on an HTML page when included as a `<script>`.
 
 > Note: Experimental and under development, currently the compiler is not very friendly and might misbehave at times; Contributions/Issues welcome.
 
